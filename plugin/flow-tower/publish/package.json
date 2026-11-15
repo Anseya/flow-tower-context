@@ -1,0 +1,77 @@
+{
+  "name": "flow-tower-context",
+  "version": "0.66.3",
+  "description": "Compaction-driven project-level context memory for DeepSeek Harness (DSH): a searchable, citation-backed project dictionary with adaptive dual injection and multi-agent sharing.",
+  "type": "module",
+  "main": "index.js",
+  "icon": "icon.svg",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.3 <0.3.0",
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "context",
+    "context-engineering",
+    "memory",
+    "compaction",
+    "retrieval",
+    "agent"
+  ],
+  "homepage": "https://github.com/Anseya/flow-tower-context#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anseya/flow-tower-context.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Anseya/flow-tower-context/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./compaction": "./compaction/index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "client.js",
+    "compaction",
+    "assets",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs/DETAIL.md",
+    "docs/DETAIL.zh.md",
+    "docs/INSTALL.md",
+    "docs/COMPATIBILITY.md",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "market/index.json",
+    "market/icon.svg",
+    "module-graph.exemptions.json",
+    "tools/mcp-server.mjs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

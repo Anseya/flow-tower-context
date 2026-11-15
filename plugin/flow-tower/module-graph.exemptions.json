@@ -1,0 +1,19 @@
+{
+  "files": {
+    "lib/store.js": {
+      "reason": "Single SQLite persistence layer: transactions, schema, migrations, archive, search index and metrics must share one connection and one schema version. Split design is tracked in docs/store-split-plan.md.",
+      "owner": "flow-tower",
+      "reviewBy": "2026-12-31"
+    },
+    "client.js": {
+      "reason": "Single client entry: slot registration, panel routing and view components share one bundle boundary.",
+      "owner": "flow-tower",
+      "reviewBy": "2026-12-31"
+    },
+    "lib/web-page-script.js": {
+      "reason": "Single browser script injected as one <script> block: search, tabs, graph, settings and locale share one DOM/state closure. CSS and HTML shell are already split; splitting the script itself would add cross-template coupling without a bundler, and the page is served unchanged.",
+      "owner": "flow-tower",
+      "reviewBy": "2026-12-31"
+    }
+  }
+}

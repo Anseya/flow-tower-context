@@ -1,0 +1,22 @@
+{
+  "name": "@local/flow-tower-compaction",
+  "version": "0.66.2",
+  "private": true,
+  "type": "module",
+  "description": "Flow Tower compaction backend: BasicCompactionEngine delegate with ranked project memory, user-selectable storage and per-run evidence",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

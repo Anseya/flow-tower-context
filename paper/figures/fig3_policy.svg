@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="423.935pt" height="223.416pt" viewBox="0 0 423.935 223.416" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-15T13:12:07.681055</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 223.416 
+L 423.935 223.416 
+L 423.935 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 82.02604 40.35672 
+L 154.53256 40.35672 
+Q 158.60596 40.35672 158.60596 38.55492 
+L 158.60596 25.58196 
+Q 158.60596 23.78016 154.53256 23.78016 
+L 82.02604 23.78016 
+Q 77.95264 23.78016 77.95264 25.58196 
+L 77.95264 38.55492 
+Q 77.95264 40.35672 82.02604 40.35672 
+z
+" clip-path="url(#pbae803469b)" style="fill: #ffffff; stroke: #6b7280; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 163.49404 40.35672 
+L 236.00056 40.35672 
+Q 240.07396 40.35672 240.07396 38.55492 
+L 240.07396 25.58196 
+Q 240.07396 23.78016 236.00056 23.78016 
+L 163.49404 23.78016 
+Q 159.42064 23.78016 159.42064 25.58196 
+L 159.42064 38.55492 
+Q 159.42064 40.35672 163.49404 40.35672 
+z
+" clip-path="url(#pbae803469b)" style="fill: #ffffff; stroke: #6b7280; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 244.96204 40.35672 
+L 317.46856 40.35672 
+Q 321.54196 40.35672 321.54196 38.55492 
+L 321.54196 25.58196 
+Q 321.54196 23.78016 317.46856 23.78016 
+L 244.96204 23.78016 
+Q 240.88864 23.78016 240.88864 25.58196 
+L 240.88864 38.55492 
+Q 240.88864 40.35672 244.96204 40.35672 
+z
+" clip-path="url(#pbae803469b)" style="fill: #ffffff; stroke: #6b7280; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 326.43004 40.35672 
+L 398.93656 40.35672 
+Q 403.00996 40.35672 403.00996 38.55492 
+L 403.00996 25.58196 
+Q 403.00996 23.78016 398.93656 23.78016 
+L 326.43004 23.78016 
+Q 322.35664 23.78016 322.35664 25.58196 
+L 322.35664 38.55492 
+Q 322.35664 40.35672 326.43004 40.35672 
+z
+" clip-path="url(#pbae803469b)" style="fill: #ffffff; stroke: #6b7280; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 12.77824 69.18552 
+L 71.02786 69.18552 
+Q 75.10126 69.18552 75.10126 67.38372 
+L 75.10126 46.8432 
+Q 75.10126 45.0414 71.02786 45.0414 
+L 12.77824 45.0414 
+Q 8.70484 45.0414 8.70484 46.8432 
+L 8.70484 67.38372 
+Q 8.70484 69.18552 12.77824 69.18552 
+z
+" clip-path="url(#pbae803469b)" style="fill: #ffffff; stroke: #6b7280; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 82.02604 69.18552 
+L 154.53256 69.18552 
+Q 158.60596 69.18552 158.60596 67.38372 
+L 158.60596 46.8432 
+Q 158.60596 45.0414 154.53256 45.0414 
+L 82.02604 45.0414 
+Q 77.95264 45.0414 77.95264 46.8432 
+L 77.95264 67.38372 
+Q 77.95264 69.18552 82.02604 69.18552 
+z
+" clip-path="url(#pbae803469b)" style="fill: #d9efec; stroke: #1f6f6b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 163.49404 69.18552 
+L 236.00056 69.18552 
+Q 240.07396 69.18552 240.07396 67.38372 
+L 240.07396 46.8432 
+Q 240.07396 45.0414 236.00056 45.0414 
+L 163.49404 45.0414 
+Q 159.42064 45.0414 159.42064 46.8432 
+L 159.42064 67.38372 
+Q 159.42064 69.18552 163.49404 69.18552 
+z
+" clip-path="url(#pbae803469b)" style="fill: #dce9f5; stroke: #1f4e79; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 244.96204 69.18552 
+L 317.46856 69.18552 
+Q 321.54196 69.18552 321.54196 67.38372 
+L 321.54196 46.8432 
+Q 321.54196 45.0414 317.46856 45.0414 
+L 244.96204 45.0414 
+Q 240.88864 45.0414 240.88864 46.8432 
+L 240.88864 67.38372 
+Q 240.88864 69.18552 244.96204 69.18552 
+z
+" clip-path="url(#pbae803469b)" style="fill: #e9e1f4; stroke: #5b3f8c; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 326.43004 69.18552 
+L 398.93656 69.18552 
+Q 403.00996 69.18552 403.00996 67.38372 
+L 403.00996 46.8432 
+Q 403.00996 45.0414 398.93656 45.0414 
+L 326.43004 45.0414 
+Q 322.35664 45.0414 322.35664 46.8432 
+L 322.35664 67.38372 
+Q 322.35664 69.18552 326.43004 69.18552 
+z
+" clip-path="url(#pbae803469b)" style="fill: #f2f3f5; stroke: #6b7280; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 12.77824 96.21252 
+L 71.02786 96.21252 
+Q 75.10126 96.21252 75.10126 94.41072 
+L 75.10126 73.8702 
+Q 75.10126 72.0684 71.02786 72.0684 
+L 12.77824 72.0684 
+Q 8.70484 72.0684 8.70484 73.8702 
+L 8.70484 94.41072 
+Q 8.70484 96.21252 12.77824 96.21252 
+z
+" clip-path="url(#pbae803469b)" style="fill: #ffffff; stroke: #6b7280; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 82.02604 96.21252 
+L 154.53256 96.21252 
+Q 158.60596 96.21252 158.60596 94.41072 
+L 158.60596 73.8702 
+Q 158.60596 72.0684 154.53256 72.0684 
+L 82.02604 72.0684 
+Q 77.95264 72.0684 77.95264 73.8702 
+L 77.95264 94.41072 
+Q 77.95264 96.21252 82.02604 96.21252 
+z
+" clip-path="url(#pbae803469b)" style="fill: #d9efec; stroke: #1f6f6b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 163.49404 96.21252 
+L 236.00056 96.21252 
+Q 240.07396 96.21252 240.07396 94.41072 
+L 240.07396 73.8702 
+Q 240.07396 72.0684 236.00056 72.0684 
+L 163.49404 72.0684 
+Q 159.42064 72.0684 159.42064 73.8702 
+L 159.42064 94.41072 
+Q 159.42064 96.21252 163.49404 96.21252 
+z
+" clip-path="url(#pbae803469b)" style="fill: #dce9f5; stroke: #1f4e79; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 244.96204 96.21252 
+L 317.46856 96.21252 
+Q 321.54196 96.21252 321.54196 94.41072 
+L 321.54196 73.8702 
+Q 321.54196 72.0684 317.46856 72.0684 
+L 244.96204 72.0684 
+Q 240.88864 72.0684 240.88864 73.8702 
+L 240.88864 94.41072 
+Q 240.88864 96.21252 244.96204 96.21252 
+z
+" clip-path="url(#pbae803469b)" style="fill: #e9e1f4; stroke: #5b3f8c; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 326.43004 96.21252 
+L 398.93656 96.21252 
+Q 403.00996 96.21252 403.00996 94.41072 
+L 403.00996 73.8702 
+Q 403.00996 72.0684 398.93656 72.0684 
+L 326.43004 72.0684 
+Q 322.35664 72.0684 322.35664 73.8702 
+L 322.35664 94.41072 
+Q 322.35664 96.21252 326.43004 96.21252 
+z
+" clip-path="url(#pbae803469b)" style="fill: #f2f3f5; stroke: #6b7280; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 12.77824 123.23952 
+L 71.02786 123.23952 
+Q 75.10126 123.23952 75.10126 121.43772 
+L 75.10126 100.8972 
+Q 75.10126 99.0954 71.02786 99.0954 
+L 12.77824 99.0954 
+Q 8.70484 99.0954 8.70484 100.8972 
+L 8.70484 121.43772 
+Q 8.70484 123.23952 12.77824 123.23952 
+z
+" clip-path="url(#pbae803469b)" style="fill: #ffffff; stroke: #6b7280; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 82.02604 123.23952 
+L 154.53256 123.23952 
+Q 158.60596 123.23952 158.60596 121.43772 
+L 158.60596 100.8972 
+Q 158.60596 99.0954 154.53256 99.0954 
+L 82.02604 99.0954 
+Q 77.95264 99.0954 77.95264 100.8972 
+L 77.95264 121.43772 
+Q 77.95264 123.23952 82.02604 123.23952 
+z
+" clip-path="url(#pbae803469b)" style="fill: #d9efec; stroke: #1f6f6b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 163.49404 123.23952 
+L 236.00056 123.23952 
+Q 240.07396 123.23952 240.07396 121.43772 
+L 240.07396 100.8972 
+Q 240.07396 99.0954 236.00056 99.0954 
+L 163.49404 99.0954 
+Q 159.42064 99.0954 159.42064 100.8972 
+L 159.42064 121.43772 
+Q 159.42064 123.23952 163.49404 123.23952 
+z
+" clip-path="url(#pbae803469b)" style="fill: #e9e1f4; stroke: #5b3f8c; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 244.96204 123.23952 
+L 317.46856 123.23952 
+Q 321.54196 123.23952 321.54196 121.43772 
+L 321.54196 100.8972 
+Q 321.54196 99.0954 317.46856 99.0954 
+L 244.96204 99.0954 
+Q 240.88864 99.0954 240.88864 100.8972 
+L 240.88864 121.43772 
+Q 240.88864 123.23952 244.96204 123.23952 
+z
+" clip-path="url(#pbae803469b)" style="fill: #e9e1f4; stroke: #5b3f8c; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 326.43004 123.23952 
+L 398.93656 123.23952 
+Q 403.00996 123.23952 403.00996 121.43772 
+L 403.00996 100.8972 
+Q 403.00996 99.0954 398.93656 99.0954 
+L 326.43004 99.0954 
+Q 322.35664 99.0954 322.35664 100.8972 
+L 322.35664 121.43772 
+Q 322.35664 123.23952 326.43004 123.23952 
+z
+" clip-path="url(#pbae803469b)" style="fill: #f2f3f5; stroke: #6b7280; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 12.77824 150.26652 
+L 71.02786 150.26652 
+Q 75.10126 150.26652 75.10126 148.46472 
+L 75.10126 127.9242 
+Q 75.10126 126.1224 71.02786 126.1224 
+L 12.77824 126.1224 
+Q 8.70484 126.1224 8.70484 127.9242 
+L 8.70484 148.46472 
+Q 8.70484 150.26652 12.77824 150.26652 
+z
+" clip-path="url(#pbae803469b)" style="fill: #ffffff; stroke: #6b7280; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 82.02604 150.26652 
+L 154.53256 150.26652 
+Q 158.60596 150.26652 158.60596 148.46472 
+L 158.60596 127.9242 
+Q 158.60596 126.1224 154.53256 126.1224 
+L 82.02604 126.1224 
+Q 77.95264 126.1224 77.95264 127.9242 
+L 77.95264 148.46472 
+Q 77.95264 150.26652 82.02604 150.26652 
+z
+" clip-path="url(#pbae803469b)" style="fill: #d9efec; stroke: #1f6f6b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 163.49404 150.26652 
+L 236.00056 150.26652 
+Q 240.07396 150.26652 240.07396 148.46472 
+L 240.07396 127.9242 
+Q 240.07396 126.1224 236.00056 126.1224 
+L 163.49404 126.1224 
+Q 159.42064 126.1224 159.42064 127.9242 
+L 159.42064 148.46472 
+Q 159.42064 150.26652 163.49404 150.26652 
+z
+" clip-path="url(#pbae803469b)" style="fill: #f2f3f5; stroke: #6b7280; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 244.96204 150.26652 
+L 317.46856 150.26652 
+Q 321.54196 150.26652 321.54196 148.46472 
+L 321.54196 127.9242 
+Q 321.54196 126.1224 317.46856 126.1224 
+L 244.96204 126.1224 
+Q 240.88864 126.1224 240.88864 127.9242 
+L 240.88864 148.46472 
+Q 240.88864 150.26652 244.96204 150.26652 
+z
+" clip-path="url(#pbae803469b)" style="fill: #e9e1f4; stroke: #5b3f8c; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 326.43004 150.26652 
+L 398.93656 150.26652 
+Q 403.00996 150.26652 403.00996 148.46472 
+L 403.00996 127.9242 
+Q 403.00996 126.1224 398.93656 126.1224 
+L 326.43004 126.1224 
+Q 322.35664 126.1224 322.35664 127.9242 
+L 322.35664 148.46472 
+Q 322.35664 150.26652 326.43004 150.26652 
+z
+" clip-path="url(#pbae803469b)" style="fill: #f2f3f5; stroke: #6b7280; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 12.77824 177.29352 
+L 71.02786 177.29352 
+Q 75.10126 177.29352 75.10126 175.49172 
+L 75.10126 154.9512 
+Q 75.10126 153.1494 71.02786 153.1494 
+L 12.77824 153.1494 
+Q 8.70484 153.1494 8.70484 154.9512 
+L 8.70484 175.49172 
+Q 8.70484 177.29352 12.77824 177.29352 
+z
+" clip-path="url(#pbae803469b)" style="fill: #ffffff; stroke: #6b7280; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 82.02604 177.29352 
+L 154.53256 177.29352 
+Q 158.60596 177.29352 158.60596 175.49172 
+L 158.60596 154.9512 
+Q 158.60596 153.1494 154.53256 153.1494 
+L 82.02604 153.1494 
+Q 77.95264 153.1494 77.95264 154.9512 
+L 77.95264 175.49172 
+Q 77.95264 177.29352 82.02604 177.29352 
+z
+" clip-path="url(#pbae803469b)" style="fill: #d9efec; stroke: #1f6f6b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 163.49404 177.29352 
+L 236.00056 177.29352 
+Q 240.07396 177.29352 240.07396 175.49172 
+L 240.07396 154.9512 
+Q 240.07396 153.1494 236.00056 153.1494 
+L 163.49404 153.1494 
+Q 159.42064 153.1494 159.42064 154.9512 
+L 159.42064 175.49172 
+Q 159.42064 177.29352 163.49404 177.29352 
+z
+" clip-path="url(#pbae803469b)" style="fill: #f2f3f5; stroke: #6b7280; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 244.96204 177.29352 
+L 317.46856 177.29352 
+Q 321.54196 177.29352 321.54196 175.49172 
+L 321.54196 154.9512 
+Q 321.54196 153.1494 317.46856 153.1494 
+L 244.96204 153.1494 
+Q 240.88864 153.1494 240.88864 154.9512 
+L 240.88864 175.49172 
+Q 240.88864 177.29352 244.96204 177.29352 
+z
+" clip-path="url(#pbae803469b)" style="fill: #e9e1f4; stroke: #5b3f8c; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 326.43004 177.29352 
+L 398.93656 177.29352 
+Q 403.00996 177.29352 403.00996 175.49172 
+L 403.00996 154.9512 
+Q 403.00996 153.1494 398.93656 153.1494 
+L 326.43004 153.1494 
+Q 322.35664 153.1494 322.35664 154.9512 
+L 322.35664 175.49172 
+Q 322.35664 177.29352 326.43004 177.29352 
+z
+" clip-path="url(#pbae803469b)" style="fill: #f2f3f5; stroke: #6b7280; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 7.2px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; fill: #1f2937" transform="translate(94.67905 29.703015)">无 checkpoint</text>
+    <text style="font-size: 7.2px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; fill: #1f2937" transform="translate(87.941425 38.39949)">（新会话/未压缩）</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7.2px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="199.7473" y="34.051252" transform="rotate(-0 199.7473 34.051252)">新鲜（≤2 轮）</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7.2px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="281.2153" y="34.051252" transform="rotate(-0 281.2153 34.051252)">陈旧（&gt;2 轮）</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.2px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="362.6833" y="34.051252" transform="rotate(-0 362.6833 34.051252)">新鲜且压力≥0.85</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 6.9px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; fill: #1f2937" transform="translate(30.318153 54.826649)">coding</text>
+    <text style="font-size: 6.9px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; fill: #1f2937" transform="translate(19.525583 63.200662)">（编辑/修复）</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f6f6b" x="118.2793" y="55.51343" transform="rotate(-0 118.2793 55.51343)">long-only</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="118.2793" y="64.308899" transform="rotate(-0 118.2793 64.308899)">长程单注入</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f4e79" x="199.7473" y="55.532805" transform="rotate(-0 199.7473 55.532805)">dual-lite</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="199.7473" y="64.308899" transform="rotate(-0 199.7473 64.308899)">去重 · 预算×0.6</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #5b3f8c" x="281.2153" y="55.532805" transform="rotate(-0 281.2153 55.532805)">dual</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="281.2153" y="64.308899" transform="rotate(-0 281.2153 64.308899)">完整双注入</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #6b7280" x="362.6833" y="55.51343" transform="rotate(-0 362.6833 55.51343)">short-only</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="362.6833" y="64.308899" transform="rotate(-0 362.6833 64.308899)">跳过</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 6.9px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; fill: #1f2937" transform="translate(26.412107 81.853649)">research/</text>
+    <text style="font-size: 6.9px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; fill: #1f2937" transform="translate(30.316536 90.187771)">history</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f6f6b" x="118.2793" y="82.54043" transform="rotate(-0 118.2793 82.54043)">long-only</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="118.2793" y="91.335899" transform="rotate(-0 118.2793 91.335899)">长程单注入</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f4e79" x="199.7473" y="82.559805" transform="rotate(-0 199.7473 82.559805)">dual-lite</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="199.7473" y="91.335899" transform="rotate(-0 199.7473 91.335899)">去重 · 预算×0.6</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #5b3f8c" x="281.2153" y="82.559805" transform="rotate(-0 281.2153 82.559805)">dual</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="281.2153" y="91.335899" transform="rotate(-0 281.2153 91.335899)">完整双注入</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #6b7280" x="362.6833" y="82.54043" transform="rotate(-0 362.6833 82.54043)">short-only</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="362.6833" y="91.335899" transform="rotate(-0 362.6833 91.335899)">跳过</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 6.9px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="41.69938" y="113.04771" transform="rotate(-0 41.69938 113.04771)">planning</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f6f6b" x="118.2793" y="109.56743" transform="rotate(-0 118.2793 109.56743)">long-only</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="118.2793" y="118.362899" transform="rotate(-0 118.2793 118.362899)">长程单注入</text>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #5b3f8c" x="199.7473" y="109.586805" transform="rotate(-0 199.7473 109.586805)">dual</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="199.7473" y="118.362899" transform="rotate(-0 199.7473 118.362899)">规划需完整上下文</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #5b3f8c" x="281.2153" y="109.586805" transform="rotate(-0 281.2153 109.586805)">dual</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="281.2153" y="118.362899" transform="rotate(-0 281.2153 118.362899)">完整双注入</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #6b7280" x="362.6833" y="109.56743" transform="rotate(-0 362.6833 109.56743)">short-only</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="362.6833" y="118.362899" transform="rotate(-0 362.6833 118.362899)">跳过</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 6.9px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="41.69938" y="140.07471" transform="rotate(-0 41.69938 140.07471)">general</text>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f6f6b" x="118.2793" y="136.59443" transform="rotate(-0 118.2793 136.59443)">long-only</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="118.2793" y="145.389899" transform="rotate(-0 118.2793 145.389899)">长程单注入</text>
+   </g>
+   <g id="text_35">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #6b7280" x="199.7473" y="136.59443" transform="rotate(-0 199.7473 136.59443)">short-only</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="199.7473" y="145.504157" transform="rotate(-0 199.7473 145.504157)">原生 checkpoint 已够</text>
+   </g>
+   <g id="text_37">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #5b3f8c" x="281.2153" y="136.613805" transform="rotate(-0 281.2153 136.613805)">dual</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="281.2153" y="145.389899" transform="rotate(-0 281.2153 145.389899)">完整双注入</text>
+   </g>
+   <g id="text_39">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #6b7280" x="362.6833" y="136.59443" transform="rotate(-0 362.6833 136.59443)">short-only</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="362.6833" y="145.389899" transform="rotate(-0 362.6833 145.389899)">跳过</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 6.9px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; fill: #1f2937" transform="translate(27.89938 162.954594)">任意任务</text>
+    <text style="font-size: 6.9px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; fill: #1f2937" transform="translate(20.99938 171.288716)">（压力优先）</text>
+   </g>
+   <g id="text_42">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f6f6b" x="118.2793" y="163.62143" transform="rotate(-0 118.2793 163.62143)">long-only</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="118.2793" y="172.416899" transform="rotate(-0 118.2793 172.416899)">长程单注入</text>
+   </g>
+   <g id="text_44">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #6b7280" x="199.7473" y="163.62143" transform="rotate(-0 199.7473 163.62143)">short-only</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="199.7473" y="172.416899" transform="rotate(-0 199.7473 172.416899)">压力优先</text>
+   </g>
+   <g id="text_46">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #5b3f8c" x="281.2153" y="163.640805" transform="rotate(-0 281.2153 163.640805)">dual</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="281.2153" y="172.416899" transform="rotate(-0 281.2153 172.416899)">完整双注入</text>
+   </g>
+   <g id="text_48">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #6b7280" x="362.6833" y="163.62143" transform="rotate(-0 362.6833 163.62143)">short-only</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: middle; fill: #1f2937" x="362.6833" y="172.416899" transform="rotate(-0 362.6833 172.416899)">压力优先</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_31">
+     <path d="M 6.16 209.18476 
+L 13.2 209.18476 
+L 13.2 204.70476 
+L 6.16 204.70476 
+z
+" style="fill: #d9efec; stroke: #1f6f6b; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_50">
+     <text style="font-size: 6.4px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: start" x="15.76" y="209.18476" transform="rotate(-0 15.76 209.18476)">long-only：无短程，长程唯一连续源</text>
+    </g>
+    <g id="patch_32">
+     <path d="M 128.643 209.18476 
+L 135.683 209.18476 
+L 135.683 204.70476 
+L 128.643 204.70476 
+z
+" style="fill: #dce9f5; stroke: #1f4e79; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_51">
+     <text style="font-size: 6.4px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: start" x="138.243" y="209.18476" transform="rotate(-0 138.243 209.18476)">dual-lite：去重双注入，预算×0.6</text>
+    </g>
+    <g id="patch_33">
+     <path d="M 241.45 209.18476 
+L 248.49 209.18476 
+L 248.49 204.70476 
+L 241.45 204.70476 
+z
+" style="fill: #e9e1f4; stroke: #5b3f8c; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_52">
+     <text style="font-size: 6.4px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: start" x="251.05" y="209.18476" transform="rotate(-0 251.05 209.18476)">dual：完整双注入</text>
+    </g>
+    <g id="patch_34">
+     <path d="M 309.129 209.18476 
+L 316.169 209.18476 
+L 316.169 204.70476 
+L 309.129 204.70476 
+z
+" style="fill: #f2f3f5; stroke: #6b7280; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_53">
+     <text style="font-size: 6.4px; font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif; text-anchor: start" x="318.729" y="209.18476" transform="rotate(-0 318.729 209.18476)">short-only：只用原生 checkpoint</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pbae803469b">
+   <rect x="8.2975" y="3.6" width="407.34" height="216.216"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Flow Tower",
+    "zh": "Flow Tower"
+  },
+  "description": {
+    "en": "Compaction-driven project memory for DeepSeek Harness: searchable cited dictionary, adaptive injection, multi-agent sharing.",
+    "zh": "面向 DeepSeek Harness 的压缩驱动项目记忆：可检索引文词典、自适应注入与多 agent 共享。"
+  },
+  "metadata": {
+    "categories": {
+      "memory": {
+        "title": {
+          "en": "Memory",
+          "zh": "记忆"
+        }
+      }
+    },
+    "labels": {
+      "context-engineering": {
+        "title": {
+          "en": "Context engineering",
+          "zh": "上下文工程"
+        }
+      }
+    },
+    "sortKeys": {
+      "github_stars": {
+        "title": {
+          "en": "GitHub stars",
+          "zh": "GitHub 星标"
+        },
+        "order": "desc"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "flow-tower-context",
+      "title": {
+        "en": "Flow Tower Context",
+        "zh": "Flow Tower 上下文记忆"
+      },
+      "description": {
+        "en": "Deterministically compiles DSH compaction deltas into a project-local dictionary (ten entry kinds, typed relations, seq citations, summary tree), injects a long-range digest beside the native checkpoint, and can take over the compaction provider through an agent preset.",
+        "zh": "把 DSH 压缩增量确定性编译为项目本地词典（十类词条、类型化关系、seq 引文、摘要树），在原生 checkpoint 旁按需注入长程 digest，并可通过 agent 预设接管压缩 provider。"
+      },
+      "icon": "icon.svg",
+      "author": "Flow Tower contributors",
+      "homepage": "https://github.com/Anseya/flow-tower-context#readme",
+      "repository": {
+        "url": "https://github.com/Anseya/flow-tower-context"
+      },
+      "metadata": {
+        "category": "memory",
+        "labels": [
+          "context-engineering"
+        ],
+        "sortKeys": {
+          "github_stars": null
+        }
+      },
+      "versions": [
+        {
+          "version": "0.66.3",
+          "publishTimestamp": 1794720350,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.3 <0.3.0"
+          }
+        }
+      ]
+    }
+  ]
+}

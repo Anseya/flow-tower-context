@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Flow Tower 上下文记忆",
+    "description": "面向 DSH 的压缩驱动项目记忆：可检索、带引文回放的词典，配合自适应双注入与多 agent 共享。",
+    "detail": "docs/DETAIL.zh.md"
+  }
+}

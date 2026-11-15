@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Flow Tower 压缩后端",
+    "description": "替换基础 compaction provider：策略/回放委托给 Basic 后端，仅把项目 Flow Tower 记忆注入摘要请求。"
+  }
+}

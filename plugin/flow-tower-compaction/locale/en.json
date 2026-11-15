@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Flow Tower compaction",
+    "description": "Compaction backend that delegates policy to the shipped Basic backend and adds the project's Flow Tower memory to summarization."
+  }
+}

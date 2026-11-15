@@ -1,0 +1,1956 @@
+{
+  "root": "plugin/flow-tower",
+  "modules": [
+    {
+      "path": "client.js",
+      "loc": 751,
+      "fanIn": 0,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [
+        "react"
+      ],
+      "usedBy": [],
+      "publicApi": []
+    },
+    {
+      "path": "compaction/index.js",
+      "loc": 151,
+      "fanIn": 0,
+      "fanOut": 3,
+      "dependsOn": [
+        "compaction/lib/memory.js",
+        "compaction/lib/policy.js",
+        "compaction/lib/storage.js"
+      ],
+      "externalDeps": [
+        "node:fs",
+        "node:os",
+        "node:path",
+        "node:url"
+      ],
+      "usedBy": [],
+      "publicApi": [
+        "default"
+      ]
+    },
+    {
+      "path": "compaction/lib/memory.js",
+      "loc": 226,
+      "fanIn": 1,
+      "fanOut": 1,
+      "dependsOn": [
+        "compaction/lib/storage.js"
+      ],
+      "externalDeps": [
+        "node:fs",
+        "node:sqlite"
+      ],
+      "usedBy": [
+        "compaction/index.js",
+        "test/compaction-storage.test.js"
+      ],
+      "publicApi": [
+        "entryScore",
+        "loadProjectMemory",
+        "taskScore"
+      ]
+    },
+    {
+      "path": "compaction/lib/policy.js",
+      "loc": 49,
+      "fanIn": 1,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [
+        "node:fs",
+        "node:os",
+        "node:path"
+      ],
+      "usedBy": [
+        "compaction/index.js"
+      ],
+      "publicApi": [
+        "projectAllowed"
+      ]
+    },
+    {
+      "path": "compaction/lib/storage.js",
+      "loc": 13,
+      "fanIn": 2,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/storage.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "compaction/index.js",
+        "compaction/lib/memory.js"
+      ],
+      "publicApi": [
+        "*"
+      ]
+    },
+    {
+      "path": "index.js",
+      "loc": 619,
+      "fanIn": 0,
+      "fanOut": 20,
+      "dependsOn": [
+        "lib/adaptive-budget.js",
+        "lib/catalog.js",
+        "lib/compaction-context.js",
+        "lib/compaction-evidence.js",
+        "lib/compaction-wrapper.js",
+        "lib/compiler.js",
+        "lib/config.js",
+        "lib/host-utils.js",
+        "lib/injection-policy.js",
+        "lib/llm.js",
+        "lib/maintenance.js",
+        "lib/manager.js",
+        "lib/project-policy.js",
+        "lib/resource-guard.js",
+        "lib/resources.js",
+        "lib/session-read.js",
+        "lib/settings.js",
+        "lib/tools.js",
+        "lib/util.js",
+        "lib/web.js"
+      ],
+      "externalDeps": [
+        "node:crypto"
+      ],
+      "usedBy": [
+        "test/apply.test.js"
+      ],
+      "publicApi": [
+        "LEGEND_SECTION",
+        "apply",
+        "inject",
+        "name"
+      ]
+    },
+    {
+      "path": "lib/adaptive-budget.js",
+      "loc": 40,
+      "fanIn": 1,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "index.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "MIN_ADAPTIVE_BUDGET",
+        "adaptDigestBudget"
+      ]
+    },
+    {
+      "path": "lib/brief.js",
+      "loc": 429,
+      "fanIn": 1,
+      "fanOut": 4,
+      "dependsOn": [
+        "lib/code-health.js",
+        "lib/injection-policy.js",
+        "lib/util.js",
+        "lib/vocabulary.js"
+      ],
+      "externalDeps": [
+        "node:fs",
+        "node:path"
+      ],
+      "usedBy": [
+        "lib/digest.js"
+      ],
+      "publicApi": [
+        "buildBrief"
+      ]
+    },
+    {
+      "path": "lib/catalog.js",
+      "loc": 374,
+      "fanIn": 7,
+      "fanOut": 5,
+      "dependsOn": [
+        "lib/digest.js",
+        "lib/kinds.js",
+        "lib/store.js",
+        "lib/util.js",
+        "lib/vocabulary.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "eval/context-cost.mjs",
+        "eval/long-session-eval.mjs",
+        "eval/offline-eval.mjs",
+        "eval/real-session-eval.mjs",
+        "eval/runtime-smoke.mjs",
+        "eval/stress-long-session.mjs",
+        "eval/txt-corpus-eval.mjs",
+        "index.js",
+        "lib/tools/browse.js",
+        "lib/tools/lookup.js",
+        "lib/tools/search.js",
+        "lib/tools/timeline.js",
+        "lib/web-read.js",
+        "lib/web.js",
+        "test/compaction-storage.test.js",
+        "test/flow-tower.test.js",
+        "test/manager.test.js",
+        "tools/mcp-server.mjs"
+      ],
+      "publicApi": [
+        "KIND_ORDER",
+        "LEGEND",
+        "browseText",
+        "buildDigest",
+        "buildLegend",
+        "buildSharedDigest",
+        "catalogFromStores",
+        "formatEntry",
+        "lookupText",
+        "searchText",
+        "timelineText",
+        "treeText"
+      ]
+    },
+    {
+      "path": "lib/code-health.js",
+      "loc": 99,
+      "fanIn": 1,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [
+        "node:fs",
+        "node:path"
+      ],
+      "usedBy": [
+        "lib/brief.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "WARN_LINES",
+        "moduleDebt"
+      ]
+    },
+    {
+      "path": "lib/compaction-context.js",
+      "loc": 47,
+      "fanIn": 1,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "index.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "augmentCompactionRequest"
+      ]
+    },
+    {
+      "path": "lib/compaction-evidence.js",
+      "loc": 51,
+      "fanIn": 1,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/storage.js"
+      ],
+      "externalDeps": [
+        "node:fs",
+        "node:path"
+      ],
+      "usedBy": [
+        "index.js"
+      ],
+      "publicApi": [
+        "recordCompactionRun"
+      ]
+    },
+    {
+      "path": "lib/compaction-wrapper.js",
+      "loc": 76,
+      "fanIn": 1,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "index.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "wrapCompactionService"
+      ]
+    },
+    {
+      "path": "lib/compiler-samples.js",
+      "loc": 70,
+      "fanIn": 1,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/session-read.js",
+        "lib/util.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/compiler.js"
+      ],
+      "publicApi": [
+        "MAX_SAMPLE_CHARS",
+        "sampleForSeq",
+        "samplesForDelta"
+      ]
+    },
+    {
+      "path": "lib/compiler.js",
+      "loc": 395,
+      "fanIn": 1,
+      "fanOut": 12,
+      "dependsOn": [
+        "lib/compiler-samples.js",
+        "lib/extract.js",
+        "lib/llm.js",
+        "lib/lock.js",
+        "lib/project-policy.js",
+        "lib/proposals.js",
+        "lib/relations.js",
+        "lib/resource-guard.js",
+        "lib/summary.js",
+        "lib/topics.js",
+        "lib/util.js",
+        "lib/vocabulary.js"
+      ],
+      "externalDeps": [
+        "node:crypto"
+      ],
+      "usedBy": [
+        "eval/long-session-eval.mjs",
+        "eval/offline-eval.mjs",
+        "eval/real-session-eval.mjs",
+        "eval/search-recall.mjs",
+        "eval/stress-long-session.mjs",
+        "eval/txt-corpus-eval.mjs",
+        "index.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "Compiler"
+      ]
+    },
+    {
+      "path": "lib/config.js",
+      "loc": 238,
+      "fanIn": 2,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/resource-guard.js",
+        "lib/resources.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "eval/context-cost.mjs",
+        "eval/long-session-eval.mjs",
+        "eval/offline-eval.mjs",
+        "eval/real-session-eval.mjs",
+        "eval/search-recall.mjs",
+        "eval/stress-long-session.mjs",
+        "eval/txt-corpus-eval.mjs",
+        "index.js",
+        "lib/web-write.js",
+        "test/compaction-storage.test.js",
+        "test/flow-tower.test.js",
+        "test/manager.test.js",
+        "tools/propose-agent.mjs"
+      ],
+      "publicApi": [
+        "DEFAULTS",
+        "resolveConfig"
+      ]
+    },
+    {
+      "path": "lib/digest.js",
+      "loc": 179,
+      "fanIn": 1,
+      "fanOut": 5,
+      "dependsOn": [
+        "lib/brief.js",
+        "lib/injection-policy.js",
+        "lib/kinds.js",
+        "lib/util.js",
+        "lib/vocabulary.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/catalog.js"
+      ],
+      "publicApi": [
+        "buildDigest",
+        "buildSharedDigest"
+      ]
+    },
+    {
+      "path": "lib/embeddings.js",
+      "loc": 145,
+      "fanIn": 1,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/store.js",
+        "lib/text-index.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools/search.js",
+        "test/flow-tower.test.js",
+        "tools/embed.mjs"
+      ],
+      "publicApi": [
+        "cosineSimilarity",
+        "createEmbeddingProvider",
+        "embeddingSearch",
+        "localHashVector"
+      ]
+    },
+    {
+      "path": "lib/extract.js",
+      "loc": 415,
+      "fanIn": 3,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/util.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/compiler.js",
+        "lib/maintenance.js",
+        "lib/proposals.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "ENTRY_KINDS",
+        "candidatesTokenEstimate",
+        "deriveModule",
+        "extractCandidates",
+        "splitSentences"
+      ]
+    },
+    {
+      "path": "lib/host-utils.js",
+      "loc": 55,
+      "fanIn": 1,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "index.js"
+      ],
+      "publicApi": [
+        "effectOf",
+        "makeLogger"
+      ]
+    },
+    {
+      "path": "lib/hybrid-search.js",
+      "loc": 149,
+      "fanIn": 2,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/semantic.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "eval/search-recall.mjs",
+        "lib/tools/search.js",
+        "lib/web-read.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "hybridSearch",
+        "matchesFilters",
+        "sortHits"
+      ]
+    },
+    {
+      "path": "lib/injection-policy.js",
+      "loc": 294,
+      "fanIn": 3,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/util.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "index.js",
+        "lib/brief.js",
+        "lib/digest.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "CHECKPOINT_MARKER",
+        "classifyTask",
+        "detectCheckpoint",
+        "planMarker",
+        "resolveInjectionPlan"
+      ]
+    },
+    {
+      "path": "lib/kinds.js",
+      "loc": 31,
+      "fanIn": 2,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/catalog.js",
+        "lib/digest.js"
+      ],
+      "publicApi": [
+        "KIND_ORDER",
+        "kindLabel"
+      ]
+    },
+    {
+      "path": "lib/llm-filter.js",
+      "loc": 58,
+      "fanIn": 1,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "eval/shadow-report.mjs",
+        "lib/llm.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "filterMetaProposals",
+        "isMetaProposal"
+      ]
+    },
+    {
+      "path": "lib/llm-prompt.js",
+      "loc": 166,
+      "fanIn": 2,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/llm.js",
+        "lib/tools/dev.js",
+        "tools/propose-agent.mjs"
+      ],
+      "publicApi": [
+        "buildProposalPrompt",
+        "parseProposalJson",
+        "repairModelJson",
+        "salvageEntries"
+      ]
+    },
+    {
+      "path": "lib/llm-search.js",
+      "loc": 122,
+      "fanIn": 3,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/store.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools/search.js",
+        "lib/web-read.js",
+        "lib/web.js"
+      ],
+      "publicApi": [
+        "smartSearch"
+      ]
+    },
+    {
+      "path": "lib/llm.js",
+      "loc": 134,
+      "fanIn": 3,
+      "fanOut": 3,
+      "dependsOn": [
+        "lib/llm-filter.js",
+        "lib/llm-prompt.js",
+        "lib/proposals.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "index.js",
+        "lib/compiler.js",
+        "lib/tools/dev.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "createHostModelCaller",
+        "generateHostProposals"
+      ]
+    },
+    {
+      "path": "lib/lock.js",
+      "loc": 100,
+      "fanIn": 2,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [
+        "node:fs",
+        "node:path"
+      ],
+      "usedBy": [
+        "lib/compiler.js",
+        "lib/relations.js",
+        "test/flow-tower.test.js",
+        "tools/merge-projects.mjs"
+      ],
+      "publicApi": [
+        "readLock",
+        "withLock"
+      ]
+    },
+    {
+      "path": "lib/maintenance.js",
+      "loc": 171,
+      "fanIn": 1,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/extract.js",
+        "lib/vocabulary.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "index.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "attributeModules",
+        "cleanupNoise",
+        "runMaintenance"
+      ]
+    },
+    {
+      "path": "lib/manager.js",
+      "loc": 386,
+      "fanIn": 5,
+      "fanOut": 4,
+      "dependsOn": [
+        "lib/resources.js",
+        "lib/storage.js",
+        "lib/store.js",
+        "lib/util.js"
+      ],
+      "externalDeps": [
+        "node:fs",
+        "node:path"
+      ],
+      "usedBy": [
+        "eval/multi-session-stats.mjs",
+        "eval/runtime-smoke.mjs",
+        "index.js",
+        "lib/web-common.js",
+        "lib/web-read.js",
+        "lib/web-write.js",
+        "lib/web.js",
+        "test/compaction-storage.test.js",
+        "test/flow-tower.test.js",
+        "test/manager.test.js",
+        "tools/clean-noise.mjs",
+        "tools/embed.mjs",
+        "tools/export-data.mjs",
+        "tools/import-data.mjs",
+        "tools/mcp-server.mjs",
+        "tools/merge-projects.mjs",
+        "tools/relations.mjs"
+      ],
+      "publicApi": [
+        "DB_FILE",
+        "PROJECT_DIR",
+        "StoreManager",
+        "dbPathForProject",
+        "globalDbPath"
+      ]
+    },
+    {
+      "path": "lib/project-policy.js",
+      "loc": 45,
+      "fanIn": 2,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/util.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "index.js",
+        "lib/compiler.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "projectEnabled"
+      ]
+    },
+    {
+      "path": "lib/proposals.js",
+      "loc": 225,
+      "fanIn": 2,
+      "fanOut": 4,
+      "dependsOn": [
+        "lib/extract.js",
+        "lib/store.js",
+        "lib/util.js",
+        "lib/vocabulary.js"
+      ],
+      "externalDeps": [
+        "node:crypto",
+        "node:fs",
+        "node:path"
+      ],
+      "usedBy": [
+        "lib/compiler.js",
+        "lib/llm.js",
+        "test/flow-tower.test.js",
+        "tools/propose-agent.mjs"
+      ],
+      "publicApi": [
+        "PROPOSALS_DIRNAME",
+        "commitProposalEntries",
+        "processProposals",
+        "proposalsDir",
+        "validateProposal"
+      ]
+    },
+    {
+      "path": "lib/raw.js",
+      "loc": 91,
+      "fanIn": 1,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/util.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools/cite.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "citationSeqs",
+        "renderSeqLine",
+        "renderSeqRange"
+      ]
+    },
+    {
+      "path": "lib/relations-core.js",
+      "loc": 205,
+      "fanIn": 2,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/relations-types.js",
+        "lib/store.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/relations-view.js",
+        "lib/relations.js"
+      ],
+      "publicApi": [
+        "addRelation",
+        "addRelationChecked",
+        "incoming",
+        "neighbors",
+        "outgoing",
+        "removeRelation",
+        "resolveNode",
+        "rowToEdge"
+      ]
+    },
+    {
+      "path": "lib/relations-types.js",
+      "loc": 122,
+      "fanIn": 3,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/relations-core.js",
+        "lib/relations-view.js",
+        "lib/relations.js"
+      ],
+      "publicApi": [
+        "GRAPH_VERSION",
+        "NODE_KINDS",
+        "RELATIONS",
+        "canonicalType",
+        "inverseType",
+        "nodeFamily",
+        "nodeIdForEntry",
+        "nodeIdForGroup",
+        "nodeIdForHost",
+        "nodeIdForSummary",
+        "nodeIdForVolume",
+        "normalizeEdge"
+      ]
+    },
+    {
+      "path": "lib/relations-view.js",
+      "loc": 194,
+      "fanIn": 1,
+      "fanOut": 4,
+      "dependsOn": [
+        "lib/relations-core.js",
+        "lib/relations-types.js",
+        "lib/store.js",
+        "lib/util.js"
+      ],
+      "externalDeps": [
+        "node:crypto"
+      ],
+      "usedBy": [
+        "lib/relations.js"
+      ],
+      "publicApi": [
+        "exportGraph",
+        "importGraph",
+        "relateText",
+        "rollbackBatch",
+        "toDot",
+        "toMermaid"
+      ]
+    },
+    {
+      "path": "lib/relations.js",
+      "loc": 388,
+      "fanIn": 4,
+      "fanOut": 6,
+      "dependsOn": [
+        "lib/lock.js",
+        "lib/relations-core.js",
+        "lib/relations-types.js",
+        "lib/relations-view.js",
+        "lib/store.js",
+        "lib/util.js"
+      ],
+      "externalDeps": [
+        "node:crypto"
+      ],
+      "usedBy": [
+        "eval/relations-bench.mjs",
+        "lib/compiler.js",
+        "lib/tools/lookup.js",
+        "lib/tools/relate.js",
+        "lib/web-read.js",
+        "test/flow-tower.test.js",
+        "tools/export-data.mjs",
+        "tools/import-data.mjs",
+        "tools/mcp-server.mjs",
+        "tools/merge-projects.mjs",
+        "tools/relations.mjs"
+      ],
+      "publicApi": [
+        "*",
+        "findCycles",
+        "syncRelations",
+        "validateRelations"
+      ]
+    },
+    {
+      "path": "lib/resource-guard.js",
+      "loc": 47,
+      "fanIn": 5,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "index.js",
+        "lib/compiler.js",
+        "lib/config.js",
+        "lib/web-read.js",
+        "lib/web.js"
+      ],
+      "publicApi": [
+        "DEFAULT_MAX_RSS_BYTES",
+        "memoryState",
+        "memoryUnderPressure"
+      ]
+    },
+    {
+      "path": "lib/resources.js",
+      "loc": 60,
+      "fanIn": 5,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [
+        "node:os"
+      ],
+      "usedBy": [
+        "index.js",
+        "lib/config.js",
+        "lib/manager.js",
+        "lib/store-schema.js",
+        "lib/web-read.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "applyResourceProfile",
+        "hardwareProfile",
+        "isResourceCapped"
+      ]
+    },
+    {
+      "path": "lib/semantic.js",
+      "loc": 148,
+      "fanIn": 3,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/store.js",
+        "lib/text-index.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "eval/search-recall.mjs",
+        "lib/hybrid-search.js",
+        "lib/tools/search.js",
+        "lib/web-read.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "expandTerms",
+        "semanticSearch"
+      ]
+    },
+    {
+      "path": "lib/session-read.js",
+      "loc": 182,
+      "fanIn": 5,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/util.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "eval/long-session-eval.mjs",
+        "eval/real-session-eval.mjs",
+        "eval/txt-corpus-eval.mjs",
+        "index.js",
+        "lib/compiler-samples.js",
+        "lib/tools/cite.js",
+        "lib/tools/dev.js",
+        "lib/web.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "indexBySeq",
+        "projectEventMessage",
+        "readLiveEvents",
+        "readSessionEvents",
+        "renderEventLine",
+        "renderEvents",
+        "sampleFromEvents"
+      ]
+    },
+    {
+      "path": "lib/settings.js",
+      "loc": 134,
+      "fanIn": 4,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [
+        "node:fs",
+        "node:os",
+        "node:path"
+      ],
+      "usedBy": [
+        "index.js",
+        "lib/web-read.js",
+        "lib/web-write.js",
+        "lib/web.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "EDITABLE_KEYS",
+        "mergeSettings",
+        "projectSettingsPath",
+        "readPolicyLayers",
+        "readSettingsFile",
+        "resolvePolicy",
+        "settingsPath",
+        "writeSettingsFile"
+      ]
+    },
+    {
+      "path": "lib/storage.js",
+      "loc": 146,
+      "fanIn": 5,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [
+        "node:fs",
+        "node:os",
+        "node:path"
+      ],
+      "usedBy": [
+        "compaction/lib/storage.js",
+        "lib/compaction-evidence.js",
+        "lib/manager.js",
+        "lib/web-common.js",
+        "lib/web.js",
+        "test/compaction-storage.test.js"
+      ],
+      "publicApi": [
+        "DB_FILE",
+        "PROJECT_DIR",
+        "RUN_LOG",
+        "dshHome",
+        "expandUserPath",
+        "globalDbPath",
+        "globalStorageDir",
+        "projectRootDir",
+        "readStorageConfig",
+        "resolveDbPath",
+        "resolveRunLogPath",
+        "resolveStorageDir",
+        "resolveSummaryMemoryChars",
+        "settingsFile"
+      ]
+    },
+    {
+      "path": "lib/store-schema.js",
+      "loc": 356,
+      "fanIn": 1,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/resources.js",
+        "lib/util.js"
+      ],
+      "externalDeps": [
+        "node:fs",
+        "node:os",
+        "node:path"
+      ],
+      "usedBy": [
+        "lib/store.js"
+      ],
+      "publicApi": [
+        "DDL",
+        "SCHEMA_VERSION",
+        "addColumn",
+        "citationFromRow",
+        "defaultDbPath",
+        "entryFromRow",
+        "escapeLike",
+        "migrateStore",
+        "volumeFromRow"
+      ]
+    },
+    {
+      "path": "lib/store.js",
+      "loc": 1462,
+      "fanIn": 12,
+      "fanOut": 4,
+      "dependsOn": [
+        "lib/store-schema.js",
+        "lib/synonyms.js",
+        "lib/text-index.js",
+        "lib/util.js"
+      ],
+      "externalDeps": [
+        "node:fs",
+        "node:path",
+        "node:sqlite"
+      ],
+      "usedBy": [
+        "eval/context-cost.mjs",
+        "eval/long-session-eval.mjs",
+        "eval/multi-session-stats.mjs",
+        "eval/offline-eval.mjs",
+        "eval/real-session-eval.mjs",
+        "eval/relations-bench.mjs",
+        "eval/runtime-smoke.mjs",
+        "eval/search-recall.mjs",
+        "eval/stress-long-session.mjs",
+        "eval/txt-corpus-eval.mjs",
+        "lib/catalog.js",
+        "lib/embeddings.js",
+        "lib/llm-search.js",
+        "lib/manager.js",
+        "lib/proposals.js",
+        "lib/relations-core.js",
+        "lib/relations-view.js",
+        "lib/relations.js",
+        "lib/semantic.js",
+        "lib/summary.js",
+        "lib/vocabulary.js",
+        "lib/web-common.js",
+        "test/compaction-storage.test.js",
+        "test/flow-tower.test.js",
+        "test/manager.test.js",
+        "tools/clean-noise.mjs",
+        "tools/embed.mjs",
+        "tools/export-data.mjs",
+        "tools/import-data.mjs",
+        "tools/mcp-server.mjs",
+        "tools/merge-projects.mjs",
+        "tools/relations.mjs"
+      ],
+      "publicApi": [
+        "FlowStore",
+        "SCHEMA_VERSION",
+        "defaultDbPath"
+      ]
+    },
+    {
+      "path": "lib/summary.js",
+      "loc": 213,
+      "fanIn": 3,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/store.js",
+        "lib/util.js"
+      ],
+      "externalDeps": [
+        "node:crypto"
+      ],
+      "usedBy": [
+        "lib/compiler.js",
+        "lib/tools/browse.js",
+        "lib/web-read.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "CATEGORIES",
+        "rebuildSummaryTree",
+        "summaryTreeText"
+      ]
+    },
+    {
+      "path": "lib/synonyms.js",
+      "loc": 55,
+      "fanIn": 1,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/text-index.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/store.js"
+      ],
+      "publicApi": [
+        "expandQueryTerms"
+      ]
+    },
+    {
+      "path": "lib/text-index.js",
+      "loc": 94,
+      "fanIn": 5,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/embeddings.js",
+        "lib/semantic.js",
+        "lib/store.js",
+        "lib/synonyms.js",
+        "lib/topics.js"
+      ],
+      "publicApi": [
+        "entryTermWeights",
+        "sampleTerms",
+        "tokenize"
+      ]
+    },
+    {
+      "path": "lib/tools.js",
+      "loc": 13,
+      "fanIn": 1,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/tools/index.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "eval/offline-eval.mjs",
+        "eval/real-session-eval.mjs",
+        "eval/txt-corpus-eval.mjs",
+        "index.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "buildToolDefinitions"
+      ]
+    },
+    {
+      "path": "lib/tools/browse.js",
+      "loc": 104,
+      "fanIn": 1,
+      "fanOut": 3,
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/summary.js",
+        "lib/tools/common.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools/index.js"
+      ],
+      "publicApi": [
+        "createBrowseTool"
+      ]
+    },
+    {
+      "path": "lib/tools/cite.js",
+      "loc": 77,
+      "fanIn": 1,
+      "fanOut": 3,
+      "dependsOn": [
+        "lib/raw.js",
+        "lib/session-read.js",
+        "lib/tools/common.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools/index.js"
+      ],
+      "publicApi": [
+        "createCiteTool"
+      ]
+    },
+    {
+      "path": "lib/tools/common.js",
+      "loc": 136,
+      "fanIn": 8,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/util.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools/browse.js",
+        "lib/tools/cite.js",
+        "lib/tools/dev.js",
+        "lib/tools/index.js",
+        "lib/tools/lookup.js",
+        "lib/tools/relate.js",
+        "lib/tools/search.js",
+        "lib/tools/timeline.js"
+      ],
+      "publicApi": [
+        "OUTPUT_SCHEMA",
+        "TEXT_BLOCK",
+        "createToolRuntime",
+        "firstJsonObject",
+        "isEntryText",
+        "optionalInteger",
+        "optionalString",
+        "optionalTime",
+        "resolveSession",
+        "sessionProject"
+      ]
+    },
+    {
+      "path": "lib/tools/dev.js",
+      "loc": 210,
+      "fanIn": 1,
+      "fanOut": 5,
+      "dependsOn": [
+        "lib/llm-prompt.js",
+        "lib/llm.js",
+        "lib/session-read.js",
+        "lib/tools/common.js",
+        "lib/util.js"
+      ],
+      "externalDeps": [
+        "node:fs",
+        "node:path"
+      ],
+      "usedBy": [
+        "lib/tools/index.js"
+      ],
+      "publicApi": [
+        "createDevTools"
+      ]
+    },
+    {
+      "path": "lib/tools/index.js",
+      "loc": 47,
+      "fanIn": 1,
+      "fanOut": 8,
+      "dependsOn": [
+        "lib/tools/browse.js",
+        "lib/tools/cite.js",
+        "lib/tools/common.js",
+        "lib/tools/dev.js",
+        "lib/tools/lookup.js",
+        "lib/tools/relate.js",
+        "lib/tools/search.js",
+        "lib/tools/timeline.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools.js"
+      ],
+      "publicApi": [
+        "buildToolDefinitions"
+      ]
+    },
+    {
+      "path": "lib/tools/lookup.js",
+      "loc": 95,
+      "fanIn": 1,
+      "fanOut": 3,
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/relations.js",
+        "lib/tools/common.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools/index.js"
+      ],
+      "publicApi": [
+        "createLookupTool"
+      ]
+    },
+    {
+      "path": "lib/tools/relate.js",
+      "loc": 82,
+      "fanIn": 1,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/relations.js",
+        "lib/tools/common.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools/index.js"
+      ],
+      "publicApi": [
+        "createRelateTool"
+      ]
+    },
+    {
+      "path": "lib/tools/search.js",
+      "loc": 151,
+      "fanIn": 1,
+      "fanOut": 6,
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/embeddings.js",
+        "lib/hybrid-search.js",
+        "lib/llm-search.js",
+        "lib/semantic.js",
+        "lib/tools/common.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools/index.js"
+      ],
+      "publicApi": [
+        "createSearchTool"
+      ]
+    },
+    {
+      "path": "lib/tools/timeline.js",
+      "loc": 62,
+      "fanIn": 1,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/tools/common.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/tools/index.js"
+      ],
+      "publicApi": [
+        "createTimelineTool"
+      ]
+    },
+    {
+      "path": "lib/topics.js",
+      "loc": 87,
+      "fanIn": 1,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/text-index.js",
+        "lib/util.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/compiler.js"
+      ],
+      "publicApi": [
+        "extractTopics"
+      ]
+    },
+    {
+      "path": "lib/util.js",
+      "loc": 229,
+      "fanIn": 22,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [
+        "node:crypto"
+      ],
+      "usedBy": [
+        "eval/context-cost.mjs",
+        "eval/long-session-eval.mjs",
+        "eval/multi-session-stats.mjs",
+        "eval/offline-eval.mjs",
+        "eval/real-session-eval.mjs",
+        "eval/runtime-smoke.mjs",
+        "eval/shadow-report.mjs",
+        "eval/txt-corpus-eval.mjs",
+        "index.js",
+        "lib/brief.js",
+        "lib/catalog.js",
+        "lib/compiler-samples.js",
+        "lib/compiler.js",
+        "lib/digest.js",
+        "lib/extract.js",
+        "lib/injection-policy.js",
+        "lib/manager.js",
+        "lib/project-policy.js",
+        "lib/proposals.js",
+        "lib/raw.js",
+        "lib/relations-view.js",
+        "lib/relations.js",
+        "lib/session-read.js",
+        "lib/store-schema.js",
+        "lib/store.js",
+        "lib/summary.js",
+        "lib/tools/common.js",
+        "lib/tools/dev.js",
+        "lib/topics.js",
+        "lib/vocabulary.js",
+        "test/flow-tower.test.js",
+        "test/manager.test.js",
+        "tools/clean-noise.mjs",
+        "tools/embed.mjs",
+        "tools/export-data.mjs",
+        "tools/import-data.mjs",
+        "tools/mcp-server.mjs",
+        "tools/merge-projects.mjs",
+        "tools/relations.mjs"
+      ],
+      "publicApi": [
+        "clampChars",
+        "clampTokens",
+        "contentToText",
+        "estimateTokens",
+        "formatClock",
+        "formatStamp",
+        "normalizeProjectPath",
+        "normalizeWhitespace",
+        "redactSecrets",
+        "retryBusy",
+        "safeJsonParse",
+        "stableId"
+      ]
+    },
+    {
+      "path": "lib/vocabulary.js",
+      "loc": 376,
+      "fanIn": 6,
+      "fanOut": 2,
+      "dependsOn": [
+        "lib/store.js",
+        "lib/util.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "eval/runtime-smoke.mjs",
+        "lib/brief.js",
+        "lib/catalog.js",
+        "lib/compiler.js",
+        "lib/digest.js",
+        "lib/maintenance.js",
+        "lib/proposals.js",
+        "test/compaction-storage.test.js",
+        "test/flow-tower.test.js",
+        "test/manager.test.js",
+        "tools/merge-projects.mjs"
+      ],
+      "publicApi": [
+        "MAX_RELATED",
+        "TASK_NOISE_RE",
+        "aliasesOf",
+        "citeIdFor",
+        "displayHeadword",
+        "entryIdFor",
+        "ingestCandidates",
+        "normHeadword",
+        "significantTokens",
+        "taskQuality",
+        "tierFor"
+      ]
+    },
+    {
+      "path": "lib/web-common.js",
+      "loc": 251,
+      "fanIn": 5,
+      "fanOut": 3,
+      "dependsOn": [
+        "lib/manager.js",
+        "lib/storage.js",
+        "lib/store.js"
+      ],
+      "externalDeps": [
+        "node:fs"
+      ],
+      "usedBy": [
+        "lib/web-page-script.js",
+        "lib/web-page.js",
+        "lib/web-read.js",
+        "lib/web-write.js",
+        "lib/web.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "PLUGIN_VERSION",
+        "ROUTE",
+        "lastSummarizeRun",
+        "localizeText",
+        "readJsonBody",
+        "resolveStore",
+        "routeOf",
+        "storageSnapshot",
+        "taskContextCount",
+        "taskQuality"
+      ]
+    },
+    {
+      "path": "lib/web-page-script.js",
+      "loc": 790,
+      "fanIn": 1,
+      "fanOut": 1,
+      "dependsOn": [
+        "lib/web-common.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/web-page.js"
+      ],
+      "publicApi": [
+        "SCRIPT"
+      ]
+    },
+    {
+      "path": "lib/web-page-style.js",
+      "loc": 58,
+      "fanIn": 1,
+      "fanOut": 0,
+      "dependsOn": [],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/web-page.js"
+      ],
+      "publicApi": [
+        "STYLE"
+      ]
+    },
+    {
+      "path": "lib/web-page.js",
+      "loc": 93,
+      "fanIn": 1,
+      "fanOut": 3,
+      "dependsOn": [
+        "lib/web-common.js",
+        "lib/web-page-script.js",
+        "lib/web-page-style.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/web.js"
+      ],
+      "publicApi": [
+        "PAGE",
+        "TITLE"
+      ]
+    },
+    {
+      "path": "lib/web-read.js",
+      "loc": 392,
+      "fanIn": 1,
+      "fanOut": 11,
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/hybrid-search.js",
+        "lib/llm-search.js",
+        "lib/manager.js",
+        "lib/relations.js",
+        "lib/resource-guard.js",
+        "lib/resources.js",
+        "lib/semantic.js",
+        "lib/settings.js",
+        "lib/summary.js",
+        "lib/web-common.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/web.js"
+      ],
+      "publicApi": [
+        "buildApiPayload"
+      ]
+    },
+    {
+      "path": "lib/web-write.js",
+      "loc": 122,
+      "fanIn": 1,
+      "fanOut": 4,
+      "dependsOn": [
+        "lib/config.js",
+        "lib/manager.js",
+        "lib/settings.js",
+        "lib/web-common.js"
+      ],
+      "externalDeps": [],
+      "usedBy": [
+        "lib/web.js"
+      ],
+      "publicApi": [
+        "closeTask",
+        "handleWritePayload"
+      ]
+    },
+    {
+      "path": "lib/web.js",
+      "loc": 317,
+      "fanIn": 1,
+      "fanOut": 11,
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/llm-search.js",
+        "lib/manager.js",
+        "lib/resource-guard.js",
+        "lib/session-read.js",
+        "lib/settings.js",
+        "lib/storage.js",
+        "lib/web-common.js",
+        "lib/web-page.js",
+        "lib/web-read.js",
+        "lib/web-write.js"
+      ],
+      "externalDeps": [
+        "node:fs",
+        "node:path"
+      ],
+      "usedBy": [
+        "index.js",
+        "test/compaction-storage.test.js",
+        "test/flow-tower.test.js"
+      ],
+      "publicApi": [
+        "ROUTE",
+        "buildApiPayload",
+        "closeTask",
+        "createWebHandler",
+        "handleWritePayload",
+        "routeOf"
+      ]
+    }
+  ],
+  "devConsumers": [
+    {
+      "path": "eval/ci.mjs",
+      "dependsOn": []
+    },
+    {
+      "path": "eval/context-cost.mjs",
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/config.js",
+        "lib/store.js",
+        "lib/util.js"
+      ]
+    },
+    {
+      "path": "eval/long-session-eval.mjs",
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/compiler.js",
+        "lib/config.js",
+        "lib/session-read.js",
+        "lib/store.js",
+        "lib/util.js",
+        "test/fixtures.js"
+      ]
+    },
+    {
+      "path": "eval/multi-session-stats.mjs",
+      "dependsOn": [
+        "lib/manager.js",
+        "lib/store.js",
+        "lib/util.js"
+      ]
+    },
+    {
+      "path": "eval/offline-eval.mjs",
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/compiler.js",
+        "lib/config.js",
+        "lib/store.js",
+        "lib/tools.js",
+        "lib/util.js",
+        "test/fixtures.js"
+      ]
+    },
+    {
+      "path": "eval/real-session-eval.mjs",
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/compiler.js",
+        "lib/config.js",
+        "lib/session-read.js",
+        "lib/store.js",
+        "lib/tools.js",
+        "lib/util.js",
+        "test/fixtures.js"
+      ]
+    },
+    {
+      "path": "eval/relations-bench.mjs",
+      "dependsOn": [
+        "lib/relations.js",
+        "lib/store.js"
+      ]
+    },
+    {
+      "path": "eval/runtime-smoke.mjs",
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/manager.js",
+        "lib/store.js",
+        "lib/util.js",
+        "lib/vocabulary.js"
+      ]
+    },
+    {
+      "path": "eval/search-recall.mjs",
+      "dependsOn": [
+        "lib/compiler.js",
+        "lib/config.js",
+        "lib/hybrid-search.js",
+        "lib/semantic.js",
+        "lib/store.js",
+        "test/fixtures.js"
+      ]
+    },
+    {
+      "path": "eval/shadow-report.mjs",
+      "dependsOn": [
+        "lib/llm-filter.js",
+        "lib/util.js"
+      ]
+    },
+    {
+      "path": "eval/stress-long-session.mjs",
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/compiler.js",
+        "lib/config.js",
+        "lib/store.js",
+        "test/fixtures.js"
+      ]
+    },
+    {
+      "path": "eval/txt-corpus-eval.mjs",
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/compiler.js",
+        "lib/config.js",
+        "lib/session-read.js",
+        "lib/store.js",
+        "lib/tools.js",
+        "lib/util.js",
+        "test/fixtures.js"
+      ]
+    },
+    {
+      "path": "test/apply.test.js",
+      "dependsOn": [
+        "index.js",
+        "test/fixtures.js"
+      ]
+    },
+    {
+      "path": "test/compaction-storage.test.js",
+      "dependsOn": [
+        "compaction/lib/memory.js",
+        "lib/catalog.js",
+        "lib/config.js",
+        "lib/manager.js",
+        "lib/storage.js",
+        "lib/store.js",
+        "lib/vocabulary.js",
+        "lib/web.js"
+      ]
+    },
+    {
+      "path": "test/fixtures.js",
+      "dependsOn": []
+    },
+    {
+      "path": "test/flow-tower.test.js",
+      "dependsOn": [
+        "lib/adaptive-budget.js",
+        "lib/catalog.js",
+        "lib/code-health.js",
+        "lib/compaction-context.js",
+        "lib/compaction-wrapper.js",
+        "lib/compiler.js",
+        "lib/config.js",
+        "lib/embeddings.js",
+        "lib/extract.js",
+        "lib/hybrid-search.js",
+        "lib/injection-policy.js",
+        "lib/llm-filter.js",
+        "lib/llm.js",
+        "lib/lock.js",
+        "lib/maintenance.js",
+        "lib/manager.js",
+        "lib/project-policy.js",
+        "lib/proposals.js",
+        "lib/raw.js",
+        "lib/relations.js",
+        "lib/resources.js",
+        "lib/semantic.js",
+        "lib/session-read.js",
+        "lib/settings.js",
+        "lib/store.js",
+        "lib/summary.js",
+        "lib/tools.js",
+        "lib/util.js",
+        "lib/vocabulary.js",
+        "lib/web-common.js",
+        "lib/web.js",
+        "test/fixtures.js",
+        "tools/merge-projects.mjs",
+        "tools/propose-agent.mjs"
+      ]
+    },
+    {
+      "path": "test/manager.test.js",
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/config.js",
+        "lib/manager.js",
+        "lib/store.js",
+        "lib/util.js",
+        "lib/vocabulary.js"
+      ]
+    },
+    {
+      "path": "tools/clean-noise.mjs",
+      "dependsOn": [
+        "lib/manager.js",
+        "lib/store.js",
+        "lib/util.js"
+      ]
+    },
+    {
+      "path": "tools/embed.mjs",
+      "dependsOn": [
+        "lib/embeddings.js",
+        "lib/manager.js",
+        "lib/store.js",
+        "lib/util.js"
+      ]
+    },
+    {
+      "path": "tools/export-data.mjs",
+      "dependsOn": [
+        "lib/manager.js",
+        "lib/relations.js",
+        "lib/store.js",
+        "lib/util.js"
+      ]
+    },
+    {
+      "path": "tools/import-data.mjs",
+      "dependsOn": [
+        "lib/manager.js",
+        "lib/relations.js",
+        "lib/store.js",
+        "lib/util.js"
+      ]
+    },
+    {
+      "path": "tools/mcp-server.mjs",
+      "dependsOn": [
+        "lib/catalog.js",
+        "lib/manager.js",
+        "lib/relations.js",
+        "lib/store.js",
+        "lib/util.js"
+      ]
+    },
+    {
+      "path": "tools/merge-projects.mjs",
+      "dependsOn": [
+        "lib/lock.js",
+        "lib/manager.js",
+        "lib/relations.js",
+        "lib/store.js",
+        "lib/util.js",
+        "lib/vocabulary.js"
+      ]
+    },
+    {
+      "path": "tools/module-graph.mjs",
+      "dependsOn": []
+    },
+    {
+      "path": "tools/propose-agent.mjs",
+      "dependsOn": [
+        "lib/config.js",
+        "lib/llm-prompt.js",
+        "lib/proposals.js"
+      ]
+    },
+    {
+      "path": "tools/relations.mjs",
+      "dependsOn": [
+        "lib/manager.js",
+        "lib/relations.js",
+        "lib/store.js",
+        "lib/util.js"
+      ]
+    }
+  ],
+  "cycles": [],
+  "health": {
+    "warn": [
+      {
+        "path": "index.js",
+        "loc": 619
+      },
+      {
+        "path": "lib/brief.js",
+        "loc": 429
+      },
+      {
+        "path": "lib/extract.js",
+        "loc": 415
+      }
+    ],
+    "fail": [],
+    "exemptions": [
+      {
+        "path": "client.js",
+        "loc": 751,
+        "reason": "Single client entry: slot registration, panel routing and view components share one bundle boundary."
+      },
+      {
+        "path": "lib/store.js",
+        "loc": 1462,
+        "reason": "Single SQLite persistence layer: transactions, schema, migrations, archive, search index and metrics must share one connection and one schema version. Split design is tracked in docs/store-split-plan.md."
+      },
+      {
+        "path": "lib/web-page-script.js",
+        "loc": 790,
+        "reason": "Single browser script injected as one <script> block: search, tabs, graph, settings and locale share one DOM/state closure. CSS and HTML shell are already split; splitting the script itself would add cross-template coupling without a bundler, and the page is served unchanged."
+      }
+    ],
+    "staleExemptions": []
+  }
+}

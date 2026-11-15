@@ -1,0 +1,13 @@
+# Build output and local runtime data
+dist/
+node_modules/
+.tools/
+.flow-tower/
+.workbuddy/
+paper/preview/
+references/
+papers/
+*.log
+npm-debug.log*
+
+~$*

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="flowTowerPaper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDFBF6"/>
+      <stop offset="1" stop-color="#E3E7F2"/>
+    </linearGradient>
+    <linearGradient id="flowTowerBinding" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5178CE"/>
+      <stop offset="1" stop-color="#32507F"/>
+    </linearGradient>
+    <linearGradient id="flowTowerMark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5BA64"/>
+      <stop offset="1" stop-color="#D2821F"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#flowTowerPaper)" stroke="#2A4C90" stroke-width="1.8" stroke-linejoin="round">
+    <rect x="12" y="44.8" width="40" height="9" rx="2.6"/>
+    <rect x="14" y="35.45" width="36" height="8.2" rx="2.4"/>
+    <rect x="16.5" y="26.7" width="31" height="7.6" rx="2.2"/>
+    <rect x="19.5" y="18.45" width="25" height="7.1" rx="2"/>
+    <rect x="23" y="10.7" width="18" height="6.6" rx="1.8"/>
+  </g>
+  <g fill="url(#flowTowerBinding)">
+    <path d="M14.6 44.8H16.8V53.8H14.6A2.6 2.6 0 0 1 12 51.2V47.4A2.6 2.6 0 0 1 14.6 44.8Z"/>
+    <path d="M16.4 35.45H18.4V43.65H16.4A2.4 2.4 0 0 1 14 41.25V37.85A2.4 2.4 0 0 1 16.4 35.45Z"/>
+    <path d="M18.7 26.7H20.4V34.3H18.7A2.2 2.2 0 0 1 16.5 32.1V28.9A2.2 2.2 0 0 1 18.7 26.7Z"/>
+    <path d="M21.5 18.45H22.8V25.55H21.5A2 2 0 0 1 19.5 23.55V20.45A2 2 0 0 1 21.5 18.45Z"/>
+    <path d="M24.8 10.7H25.8V17.3H24.8A1.8 1.8 0 0 1 23 15.5V12.5A1.8 1.8 0 0 1 24.8 10.7Z"/>
+  </g>
+  <path d="M33.2 8.2H37.6V30.6L35.4 27.2L33.2 30.6Z" fill="url(#flowTowerMark)"/>
+</svg>

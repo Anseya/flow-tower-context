@@ -1,0 +1,18 @@
+- id: compaction-basic
+  name: '@deepseek-ai/dsh-compaction-basic'
+  disabled: true
+
+- insert:
+    - id: flow-tower-compaction
+      name: '@local/flow-tower-compaction'
+      config:
+        # Compact earlier than the shipped 0.8 / 0.16 policy. Long multi-round
+        # projects accumulate raw session logs faster than the prompt surface;
+        # an earlier, smaller summary keeps the host's summarization call and
+        # retained tail bounded.
+        thresholdRatio: 0.72
+        retainRatio: 0.12
+        headroomTokens: 32768
+        maxTokens: 16384
+        compactionRetries: 1
+        maxOverflowRetries: 2

@@ -1,0 +1,60 @@
+{
+  "name": "@local/flow-tower",
+  "version": "0.66.3",
+  "private": true,
+  "description": "Context Flow Tower — dictionary-style project memory for DeepSeek Harness: compiles compaction deltas into cited entries and exposes dict_browse, dict_lookup, dict_cite, and dict_timeline.",
+  "type": "module",
+  "main": "index.js",
+  "icon": "icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./compaction": "./compaction/index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./client": "./client.js"
+  },
+  "files": [
+    "index.js",
+    "lib/**/*.js",
+    "cordis.patch.yml",
+    "module-graph.exemptions.json",
+    "tools/**/*.mjs",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "client.js",
+    "assets",
+    "compaction"
+  ],
+  "scripts": {
+    "test": "node --test test/flow-tower.test.js test/apply.test.js test/manager.test.js test/compaction-storage.test.js && node tools/module-graph.mjs --check",
+    "graph": "node tools/module-graph.mjs --write",
+    "graph:check": "node tools/module-graph.mjs --check",
+    "verify": "npm test",
+    "build:publish": "node tools/build-publish.mjs",
+    "publish:check": "node tools/publish-check.mjs",
+    "publish:check:strict": "node tools/publish-check.mjs --strict",
+    "eval": "node eval/offline-eval.mjs",
+    "eval:corpus": "node eval/txt-corpus-eval.mjs",
+    "eval:real": "node eval/real-session-eval.mjs",
+    "eval:long": "node eval/long-session-eval.mjs",
+    "eval:stats": "node eval/multi-session-stats.mjs",
+    "eval:cost": "node eval/context-cost.mjs",
+    "eval:search": "node eval/search-recall.mjs",
+    "merge": "node tools/merge-projects.mjs",
+    "export": "node tools/export-data.mjs",
+    "stress": "node eval/stress-long-session.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

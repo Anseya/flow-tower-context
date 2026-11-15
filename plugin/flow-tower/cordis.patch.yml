@@ -1,0 +1,57 @@
+- id: tool-result-pruner
+  name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
+  disabled: false
+
+- id: compaction-basic
+  name: '@deepseek-ai/dsh-compaction-basic'
+  disabled: true
+
+- id: command-compact
+  name: '@deepseek-ai/dsh-command-compact'
+  disabled: false
+
+- insert:
+    - id: flow-tower
+      name: '@local/flow-tower'
+      config:
+        contextRole: primary
+        projectMode: current
+        projectAllowlist: []
+        projectDenylist: []
+        memoryGuard: true
+        maxRssBytes: 6442450944
+        nodeBudgetTokens: 2400
+        maxEntries: 6000
+        glossTokens: 480
+        digestBudgetTokens: 2000
+        adaptiveDigestBudget: true
+        digestMode: on-change
+        digestStrategy: brief
+        injectionMode: auto
+        rawBudgetTokens: 48000
+        summaryMemoryChars: 1800
+        maxCiteExcerptChars: 800
+        maxCitationsPerEntry: 48
+        tierHotDays: 14
+        tierWarmDays: 60
+        cacheTelemetry: true
+        storageMode: project
+        storagePath: null
+        maxTopicsPerRound: 100
+        proposalMode: 'off'
+        relationsMode: on
+        llmCompiler: 'off'
+        llmMaxTokens: 32000
+        llmTimeoutMs: 90000
+
+    # Same bundle owns the compaction provider: disabling/removing
+    # @local/flow-tower removes both rows and lets compaction-basic return.
+    - id: flow-tower-compaction
+      name: './compaction/index.js'
+      config:
+        thresholdRatio: 0.72
+        retainRatio: 0.12
+        headroomTokens: 32768
+        maxTokens: 16384
+        compactionRetries: 1
+        maxOverflowRetries: 2

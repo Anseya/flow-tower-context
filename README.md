@@ -2,7 +2,7 @@
 
 > 压缩驱动的项目级上下文记忆系统 · Compaction-driven project memory for DeepSeek Harness
 >
-> **中文** · [English](#english) · 状态：v0.66.3 · 发布包名 **`flow-tower-context`** · 许可证 **MIT** · 公开发布准备中
+> **中文** · [English](#english) · 状态：**已发布 v0.66.3**（npm · GitHub Release） · 许可证 **MIT**
 
 ## 中文
 
@@ -62,8 +62,8 @@ npm run publish:check    # 发布前检查清单
 
 ### 论文与复现
 
-- 论文（Word）：[paper/FlowTower-压缩驱动的项目级上下文记忆系统-v2.docx](paper/FlowTower-压缩驱动的项目级上下文记忆系统-v2.docx)
-  （最新版；原名文件被 Word 占用时以此为准）
+- 论文（Word）：[paper/FlowTower-压缩驱动的项目级上下文记忆系统.docx](paper/FlowTower-压缩驱动的项目级上下文记忆系统.docx)
+  （19 页，含 §7.3 发布地址与 §7.4 DSH 安装方式）
 - 图表源（2D SVG + 3D mplot3d SVG/PNG）：[paper/figures/](paper/figures/)
 - 数据与复现脚本：[paper/README.md](paper/README.md)、[paper/data/stats.json](paper/data/stats.json)
 

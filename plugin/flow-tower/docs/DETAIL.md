@@ -50,7 +50,7 @@ install paths, verification steps and uninstall.
 
 ## Evaluation (repository)
 
-84/84 unit/integration tests, 68 modules with zero cycles, recall@5 0.94 on the offline search set, single long-range
+85/85 unit/integration tests, 68 modules with zero cycles, recall@5 0.94 on the offline search set, single long-range
 injection 694–829 tokens, and a real `/compact` takeover injecting 1,799 characters of project memory. The paper in the
 repository documents the design, the eight engineering problems found, and the long-text corpus stress test.
 

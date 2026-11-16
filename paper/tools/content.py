@@ -98,7 +98,7 @@ BODY = [
           "（第 4.2、4.7 节）。"),
     ("p", "全文组织如下：第 1 节回顾相关工作；第 2 节给出系统设计与关键决策；第 3 节介绍实现与工程治理；"
           "第 4 节给出真实会话上的实验与评估；第 5 节讨论开发中发现的问题与经验；第 6 节分析局限与未来工作；"
-          "第 7 节介绍项目结构、复现方式与项目地址；第 8 节总结全文。"),
+          "第 7 节介绍项目结构、复现方式、发布地址与安装方式；第 8 节总结全文。"),
 
     ("h1", "1　相关工作"),
     ("h2", "1.1　分层摘要与记忆树"),
@@ -315,7 +315,8 @@ BODY = [
           "lookup/cite 保真在所有语料上均为 100%，这说明逐字回放来自 seq 引文机制本身，与语料类型无关；"
           "相比之下，递归摘要类方法在小说这类长叙事语料上会因改写而丢失逐字证据。"),
     ("p", "需要说明的是，上述数字来自项目 v0.4–v0.5 阶段的压测记录；小说语料受版权限制未随仓库分发，"
-          "当前 v0.66.3 未重跑同一语料，因此表 5 应理解为“规模上限与保真机制”的证据，而不是当前版本的"
+          "当前版本未重跑同一语料（v0.66.3 的数据；v0.66.4 仅做 Connection 认证加固），因此表 5 应理解为"
+          "“规模上限与保真机制”的证据，而不是当前版本的"
           "精确性能；当前版本已把词条扩展到十类、单卷上限提升到 6,000，并在同一离线 harness 上通过了"
           "论文合集与技术文档的回归。"),
     ("h2", "4.8　讨论"),
@@ -414,18 +415,33 @@ BODY = [
              "python paper/tools/collect_stats.py   # 只读 DB → paper/data/stats.json\n"
              "python paper/tools/make_figures.py    # 图 1–6（SVG + PNG）\n"
              "python paper/tools/build_docx.py      # 生成论文 DOCX"),
-    ("h2", "7.3　项目地址与数据"),
-    ("p", "项目计划以开源 DSH 插件形式发布：插件源码在 plugin/flow-tower/，配套设计文档在 design/flow-tower/，"
-          "论文与图表源在 paper/。公开包名为 flow-tower-context（npm，MIT 许可），代码仓库（公开地址）："),
-    ("url", "https://github.com/Anseya/flow-tower-context"),
-    ("p", "其中 Anseya 将在仓库创建后替换为实际组织/用户名；DSH 官方站点与宿主版本见文献⟦14⟧"
-          "（https://www.deepseek.com/harness/）。发布形态为 npm 包 + DSH 插件市场 format 1 索引"
-          "（索引地址 https://cdn.jsdelivr.net/npm/flow-tower-context/market/index.json），"
-          "用户可在 DSH「插件 → 发现」中添加索引后搜索安装，或直接安装 flow-tower-context@0.66.3。"),
+    ("h2", "7.3　发布地址"),
+    ("p", "本工作已按开放源码方式发布（MIT 许可）：源代码仓库、npm 包与 GitHub Release 使用同一构建产物 "
+          "flow-tower-context@0.66.4，可直接访问下列地址："),
+    ("code", "GitHub 仓库：https://github.com/Anseya/flow-tower-context\n"
+             "npm 包：https://www.npmjs.com/package/flow-tower-context\n"
+             "Release：https://github.com/Anseya/flow-tower-context/releases/tag/v0.66.4\n"
+             "tarball：https://github.com/Anseya/flow-tower-context/releases/download/v0.66.4/flow-tower-context-0.66.4.tgz\n"
+             "插件市场索引：https://cdn.jsdelivr.net/npm/flow-tower-context/market/index.json"),
     ("p", "数据可用性：论文中的统计数字来自项目本地库 .flow-tower/flow_tower.db 的只读快照"
           "（paper/data/stats.json，含词条/关系/引文/编译与注入事件/用量），不含原始会话文本；"
           "词条引文以 seq 指针指向会话日志，发布物与论文均不包含用户隐私内容。所有图源为 SVG（图 6 为 "
           "matplotlib mplot3d 导出的三维 SVG），可直接编辑复核。"),
+    ("h2", "7.4　在 DSH 中安装"),
+    ("p", "方式一（图形界面，推荐）：在 DSH 中打开「插件 → 实验性插件」，开启「自定义插件索引」，"
+          "再到「发现 → 添加索引源」粘贴上面的插件市场索引 URL，搜索 Flow Tower Context 并安装；"
+          "安装完成后重启 DSH。新建会话时选择预设 Flow Tower (compaction memory) 即启用压缩接管；"
+          "不选该预设时插件仍以观察 + 注入模式工作。"),
+    ("p", "方式二（命令，npm 包）：在 DSH 内使用插件管理器安装已发布的 npm 包："),
+    ("code", "plugin_manager install_bundle target=flow-tower-context@0.66.4"),
+    ("p", "方式三（GitHub Release 离线安装）：下载 tarball 后指定本地文件路径："),
+    ("code", "plugin_manager install_bundle target=<下载目录>\\flow-tower-context-0.66.4.tgz"),
+    ("p", "环境要求：DSH >=0.2.2-rc.3 <0.3.0（engines.dsh 声明），安装后需重启 DSH。面板页面与全部 HTTP 路由"
+          "（检索、引文回放、模型搜索、设置写入）都位于 DSH Connection 准入之后：未认证请求返回 401/403，"
+          "Connection 服务不可用时按 fail-closed 返回 503，不会匿名暴露项目记忆。验证：访问 "
+          "/flow-tower/api/status，version 应为 0.66.4；使用 Flow Tower (compaction memory) 预设并发生一次压缩后，"
+          "lastSummarize.memoryChars > 0 且 compactionDiagnostics.sessionEngineVerified = true。"
+          "卸载与回退步骤见仓库 docs/INSTALL.md 与 docs/COMPATIBILITY.md。"),
 
     ("h1", "8　结论"),
     ("p", "本文面向“已有压缩机制的智能体宿主”提出了压缩驱动的项目级上下文记忆系统 Flow Tower。系统不重造压缩、"

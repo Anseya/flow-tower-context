@@ -1,6 +1,6 @@
 {
   "name": "flow-tower-context",
-  "version": "0.66.3",
+  "version": "0.66.4",
   "description": "Compaction-driven project-level context memory for DeepSeek Harness (DSH): a searchable, citation-backed project dictionary with adaptive dual injection and multi-agent sharing.",
   "type": "module",
   "main": "index.js",

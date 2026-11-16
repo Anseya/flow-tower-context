@@ -1,4 +1,4 @@
-# Public bundle patch for the `flow-tower-context` package (v0.66.3).
+# Public bundle patch for the `flow-tower-context` package (v0.66.4).
 #
 # Two rows are inserted:
 #   1. `flow-tower` — the main Host plugin: compaction-event observer, deterministic

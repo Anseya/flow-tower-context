@@ -9,7 +9,7 @@
 ```powershell
 # 0) 一次性：把 OWNER / <owner> 换成你的 GitHub 用户名/组织名，然后
 cd <repo>
-git init; git add .; git commit -m "release: flow-tower-context 0.66.3"
+git init; git add .; git commit -m "release: flow-tower-context 0.66.4"
 # 建好 GitHub 仓库后：git remote add origin ...; git push -u origin main
 
 cd plugin/flow-tower
@@ -30,7 +30,7 @@ npm publish
 
 # 4) 打 tag / GitHub Release
 cd <repo>
-git tag v0.66.3; git push --tags
+git tag v0.66.4; git push --tags
 ```
 
 下面是从账号准备到社区提交的逐步说明。
@@ -96,7 +96,7 @@ plugin_manager install_bundle target=<repo>\dist\flow-tower-context
 ```
 
 - 重启 DSH；
-- 验证：插件面板可打开；`/flow-tower/api/status` 里 `version=0.66.3`；
+- 验证：插件面板可打开；`/flow-tower/api/status` 里 `version=0.66.4`；
 - 新建会话选预设 **Flow Tower (compaction memory)** → 发生一次压缩后，
   `lastSummarize.memoryChars > 0` 且 `compactionDiagnostics.sessionEngineVerified = true`；
 - 失败就回退（插件页 Remove / `plugin_manager remove_bundle`）并修好再发。
@@ -113,21 +113,21 @@ npm view flow-tower-context version dist-tags --json
 - 包名已被占用时（`403`），换一个仍包含 “context” 的名字（例如 `flow-tower-context-memory`），
   同步修改 `publish/package.json`、`market/index.json`、文档与论文后重建；发布前可用
   `npm view <name>` 检查是否可用；
-- 发布后如需撤销：`npm deprecate flow-tower-context@0.66.3 "superseded"` 更安全；
+- 发布后如需撤销：`npm deprecate flow-tower-context@0.66.4 "superseded"` 更安全；
   `npm unpublish` 受 npm 现行政策限制（时间窗、依赖数），且无法召回已安装的用户。
 
 ## 5. 打 tag 与 GitHub Release
 
 ```powershell
 cd <repo>
-git tag v0.66.3
+git tag v0.66.4
 git push origin main --tags
 ```
 
-在 GitHub 创建 Release：标题 `v0.66.3`，描述写变更摘要 + 安装命令：
+在 GitHub 创建 Release：标题 `v0.66.4`，描述写变更摘要 + 安装命令：
 
 ```text
-plugin_manager install_bundle target=flow-tower-context@0.66.3
+plugin_manager install_bundle target=flow-tower-context@0.66.4
 ```
 
 ## 6. 生成/更新索引 JSON
@@ -135,7 +135,7 @@ plugin_manager install_bundle target=flow-tower-context@0.66.3
 `plugin/flow-tower/market/index.json` 已经是 format 1 索引。发布后把 `publishTimestamp` 更新为 npm 上的真实发布时间：
 
 ```powershell
-npm view flow-tower-context time --json          # 取 0.66.3 的 ISO 时间
+npm view flow-tower-context time --json          # 取 0.66.4 的 ISO 时间
 # 转成 Unix 秒（PowerShell）：
 [DateTimeOffset]::Parse('<ISO 时间>').ToUnixTimeSeconds()
 ```
@@ -157,7 +157,7 @@ npm view flow-tower-context time --json          # 取 0.66.3 的 ISO 时间
 https://cdn.jsdelivr.net/npm/flow-tower-context/market/index.json
 ```
 
-（指定版本：`https://cdn.jsdelivr.net/npm/flow-tower-context@0.66.3/market/index.json`）
+（指定版本：`https://cdn.jsdelivr.net/npm/flow-tower-context@0.66.4/market/index.json`）
 
 ### 7B. GitHub Pages（更可控）
 
@@ -198,7 +198,7 @@ https://cdn.jsdelivr.net/npm/flow-tower-context/market/index.json
 
 - [ ] `<owner>` / `OWNER` 已全部替换，`git grep -n 'OWNER\|<owner>'` 为空；
 - [ ] `npm run publish:check` 通过（包名、MIT、engines、locale、market、无绝对路径）；
-- [ ] `npm test` 84/84、`module-graph --check` 通过；
+- [ ] `npm test` 85/85、`module-graph --check` 通过；
 - [ ] 本地目录安装 + 预设接管验证通过（`sessionEngineVerified=true`）；
 - [ ] `npm pack --dry-run` 文件清单正确（含 LICENSE、cordis.patch.yml、market、locale、docs）；
 - [ ] `npm publish` 成功，`npm view flow-tower-context version` 可见；

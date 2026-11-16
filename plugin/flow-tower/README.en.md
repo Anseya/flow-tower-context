@@ -1,6 +1,6 @@
 # Context Flow Tower
 
-> Version **0.66.3** · DeepSeek Harness **>=0.2.2-rc.3 <0.3.0** · public package **`flow-tower-context`** · **MIT**
+> Version **0.66.4** · DeepSeek Harness **>=0.2.2-rc.3 <0.3.0** · public package **`flow-tower-context`** · **MIT**
 >
 > English · [中文](README.md) · [Install](docs/INSTALL.md) · [Compatibility](docs/COMPATIBILITY.md) · [Publishing](docs/PUBLISHING.md) · [Project overview](../../README.md) · [Paper (Word)](../../paper/FlowTower-压缩驱动的项目级上下文记忆系统.docx) · [Design notes](../../design/flow-tower/)
 
@@ -14,7 +14,8 @@ An **observational, automatic, project-local** context-memory plugin for DeepSee
 - **Typed relations** — parent / derivedFrom / cites / replaces / mergedFrom / sibling / relatedTo / taskContext;
 - **Dual injection** — `auto` selects dual / dual-lite / long-only / short-only from task type, checkpoint freshness and context pressure;
 - **Multi-agent sharing** — subagents and fresh sessions without their own dictionary volume read a shared project digest with cross-volume open tasks;
-- **Project-local storage** — a single SQLite file (WAL + project write lock), default `<project>/.flow-tower/flow_tower.db`.
+- **Project-local storage** — a single SQLite file (WAL + project write lock), default `<project>/.flow-tower/flow_tower.db`;
+- **Authentication first** — the panel page, search/citation APIs and settings writes all sit behind DSH Connection admission: unauthenticated requests receive 401/403, and when the Connection service is unavailable the plugin fails closed with 503 instead of exposing project memory anonymously.
 
 ## 2. Quick start
 
@@ -35,7 +36,7 @@ After release (npm / plugin market):
 #   Search "Flow Tower Context" → install → restart DSH
 
 # B. Install the npm package directly
-plugin_manager install_bundle target=flow-tower-context@0.66.3
+plugin_manager install_bundle target=flow-tower-context@0.66.4
 ```
 
 Local development / before release:
@@ -132,7 +133,7 @@ Six model-facing tools: `dict_browse`, `dict_lookup`, `dict_cite`, `dict_timelin
 
 ```powershell
 cd plugin/flow-tower
-npm test                  # 84/84 tests + module-graph --check (68 modules / 0 cycles)
+npm test                  # 85/85 tests + module-graph --check (68 modules / 0 cycles)
 npm run eval:search       # recall: lexical/hybrid Recall@5 = 0.94, sparse semantic 0.66
 npm run eval:cost         # context cost: 5.26M chars of tool output, pruner bound ≈315k tokens, avg injection 767 tokens
 node eval/txt-corpus-eval.mjs --file=<corpus.txt>   # long-text stress (8.44M-char novel → 2,846 entries, 100% fidelity)

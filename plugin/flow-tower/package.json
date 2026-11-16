@@ -1,6 +1,6 @@
 {
   "name": "@local/flow-tower",
-  "version": "0.66.3",
+  "version": "0.66.4",
   "private": true,
   "description": "Context Flow Tower — dictionary-style project memory for DeepSeek Harness: compiles compaction deltas into cited entries and exposes dict_browse, dict_lookup, dict_cite, and dict_timeline.",
   "type": "module",

@@ -1,6 +1,6 @@
 # Context Flow Tower（上下文流动塔）
 
-> 当前版本 **0.66.3** · DeepSeek Harness **>=0.2.2-rc.3 <0.3.0** · 发布包名 **`flow-tower-context`** · **MIT**
+> 当前版本 **0.66.4** · DeepSeek Harness **>=0.2.2-rc.3 <0.3.0** · 发布包名 **`flow-tower-context`** · **MIT**
 >
 > 中文 · [English](README.en.md) · [安装](docs/INSTALL.md) · [兼容性](docs/COMPATIBILITY.md) · [发布指南](docs/PUBLISHING.md) · [项目总览](../../README.md) · [论文（Word）](../../paper/FlowTower-压缩驱动的项目级上下文记忆系统.docx) · [设计文档](../../design/flow-tower/)
 
@@ -14,7 +14,8 @@
 - **类型化关系**：parent / derivedFrom / cites / replaces / mergedFrom / sibling / relatedTo / taskContext；
 - **双注入策略**：`auto` 在 dual / dual-lite / long-only / short-only 间按任务类型、checkpoint 新鲜度与上下文压力自适应；
 - **多 agent 共享**：无自有词典卷的子代理/新会话读取项目级共享 digest，并跨卷聚合 open task；
-- **项目本地存储**：单文件 SQLite（WAL + 项目写锁），默认 `<项目>/.flow-tower/flow_tower.db`。
+- **项目本地存储**：单文件 SQLite（WAL + 项目写锁），默认 `<项目>/.flow-tower/flow_tower.db`；
+- **认证优先**：面板页面、检索/引文 API 与设置写入全部经过 DSH Connection 准入；未认证请求返回 401/403，Connection 服务不可用时 fail-closed（503），不会匿名暴露项目记忆。
 
 ## 2. 快速开始
 
@@ -35,7 +36,7 @@
 #   搜索 “Flow Tower Context” → 安装 → 重启 DSH
 
 # 方式 B：直接安装 npm 包
-plugin_manager install_bundle target=flow-tower-context@0.66.3
+plugin_manager install_bundle target=flow-tower-context@0.66.4
 ```
 
 开发/未发布时（当前仓库形态）：
@@ -124,7 +125,7 @@ Invoke-RestMethod http://127.0.0.1:<port>/flow-tower/api/status | ConvertTo-Json
 
 ```powershell
 cd plugin/flow-tower
-npm test                  # 84/84 单测 + module-graph --check（68 模块 / 0 循环）
+npm test                  # 85/85 单测 + module-graph --check（68 模块 / 0 循环）
 npm run eval:search       # 检索召回：lexical/hybrid Recall@5 = 0.94，sparse semantic 0.66
 npm run eval:cost         # 上下文成本：工具输出 525.9 万字符、裁剪上限 ≈315k token、注入平均 767 token
 node eval/txt-corpus-eval.mjs --file=<语料.txt>   # 长文本压测（《凡人修仙传》全本 8.44M 字符 → 2,846 词条、保真 100%）

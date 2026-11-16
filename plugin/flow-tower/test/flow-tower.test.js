@@ -759,7 +759,11 @@ test('web: read-only API exposes catalog, search, lookup and task views', () => 
     assert.equal(tree.status, 200)
     assert.match(tree.json.text, /# Tree — volume/)
 
-    const handler = createWebHandler({ manager, log: createNoopLogger() })
+    const handler = createWebHandler({
+      manager,
+      log: createNoopLogger(),
+      ctx: { get: (name) => name === 'connection' ? { requestRejection: () => undefined } : undefined },
+    })
     let html = ''
     handler(
       { url: '/flow-tower/', method: 'GET' },
@@ -781,6 +785,36 @@ test('web: read-only API exposes catalog, search, lookup and task views', () => 
     else process.env.DSH_HOME = previous
     rmWithRetry(home)
   }
+})
+
+test('web: every route requires Connection admission and fails closed', async () => {
+  const invoke = (options, request = { url: '/flow-tower/', method: 'GET' }) => new Promise((resolve) => {
+    const handler = createWebHandler({ manager: {}, log: createNoopLogger(), ...options })
+    const response = {
+      statusCode: 0,
+      setHeader: () => {},
+      end: (body) => resolve({ statusCode: response.statusCode, body: body === undefined ? '' : String(body) }),
+    }
+    handler(request, response)
+  })
+
+  const missing = await invoke({})
+  assert.equal(missing.statusCode, 503, 'no Connection service must fail closed')
+  assert.match(missing.body, /connection admission unavailable/)
+
+  const unauthorized = await invoke({ ctx: { get: () => ({ requestRejection: () => 401 }) } })
+  assert.equal(unauthorized.statusCode, 401)
+  assert.equal(unauthorized.body, '')
+
+  const forbidden = await invoke({ ctx: { get: () => ({ requestRejection: () => 403 }) } })
+  assert.equal(forbidden.statusCode, 403)
+
+  const throwing = await invoke({ ctx: { get: () => ({ requestRejection: () => { throw new Error('connection is down') } }) } })
+  assert.equal(throwing.statusCode, 503)
+
+  const admitted = await invoke({ ctx: { get: () => ({ requestRejection: () => undefined }) } })
+  assert.equal(admitted.statusCode, 200, JSON.stringify(admitted))
+  assert.match(admitted.body, /Context Flow Tower/)
 })
 
 test('semantic: sparse vectors + co-occurrence expansion find related entries', () => {
@@ -863,7 +897,12 @@ test('web: smart-search route calls the host model and caches repeats', async ()
       calls.push(String(prompt))
       return String(prompt).includes('Rewrite') ? '{"queries":["compaction cache"]}' : '{"order":[]}'
     }
-    const handler = createWebHandler({ manager, log: createNoopLogger(), modelCaller })
+    const handler = createWebHandler({
+      manager,
+      log: createNoopLogger(),
+      modelCaller,
+      ctx: { get: (name) => name === 'connection' ? { requestRejection: () => undefined } : undefined },
+    })
     const request = async () => new Promise((resolve) => {
       handler(
         { url: '/flow-tower/api/smart-search?q=cache&limit=5&project=' + encodeURIComponent(project), method: 'GET' },

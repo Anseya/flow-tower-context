@@ -43,7 +43,7 @@ DSH 在安装与 profile 启动时会读取 `engines.dsh` 并**优先于** `@dee
 
 - 发布版本遵循 SemVer；`0.66.x` 为 0.2.2-rc.3 系列适配版本；
 - 若 DSH 破坏性变更导致接口不兼容，会提升到新 minor 并在 README 更新 `engines.dsh` 与迁移说明；
-- 测试基线：`npm test`（84/84）、`module-graph --check`（68 模块 / 0 循环）、`eval:search`（Recall@5 0.94）。
+- 测试基线：`npm test`（85/85）、`module-graph --check`（68 模块 / 0 循环）、`eval:search`（Recall@5 0.94）。
 
 ## English
 
@@ -85,4 +85,4 @@ with no native dependency and no install script.
 
 - Releases follow SemVer; `0.66.x` targets the 0.2.2-rc.3 series;
 - A breaking DSH change raises the minor version and updates `engines.dsh` plus migration notes;
-- Test baseline: `npm test` (84/84), `module-graph --check` (68 modules / 0 cycles), `eval:search` (Recall@5 0.94).
+- Test baseline: `npm test` (85/85), `module-graph --check` (68 modules / 0 cycles), `eval:search` (Recall@5 0.94).

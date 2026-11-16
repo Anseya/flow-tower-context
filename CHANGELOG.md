@@ -3,6 +3,24 @@
 All notable changes to Flow Tower Context are documented here. The format follows Keep a Changelog and the project
 uses SemVer.
 
+## [0.66.4] — 2026-11-16
+
+Security hardening requested during the plugin-market review.
+
+### Security
+
+- Every route served under `/flow-tower` — the panel page, static assets, all read APIs, model-backed smart search and
+  settings writes — now runs behind DSH Connection admission: `ctx.get('connection').requestRejection(req)` must return
+  `undefined` before any route handler dispatches.
+- Unauthenticated requests receive the Connection decision (`401` / `403`). If the Connection service is absent or the
+  admission call throws, the plugin **fails closed** with `503` instead of serving memory, citations or settings
+  anonymously.
+
+### Changed
+
+- The web-handler contract now requires `ctx`; the test suite covers a missing Connection service, 401, 403, a thrown
+  admission call and an admitted request (85/85 tests).
+
 ## [0.66.3] — 2026-11-15
 
 First public-release candidate (`flow-tower-context`, MIT).

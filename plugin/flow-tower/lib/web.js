@@ -1,11 +1,11 @@
 /**
  * --- module contract ---
- * purpose: Host web-panel adapter: route prefix, static assets and request dispatch.
+ * purpose: Host web-panel adapter: route prefix, Connection admission, static assets and request dispatch.
  * dependsOn: [generated] lib/catalog.js, lib/llm-search.js, lib/manager.js, lib/resource-guard.js, lib/session-read.js, lib/settings.js, lib/storage.js, lib/web-common.js, lib/web-page.js, lib/web-read.js, lib/web-write.js
  * externalDeps: [generated] node:fs, node:path
  * usedBy: [generated] index.js, test/compaction-storage.test.js, test/flow-tower.test.js
  * publicApi: [generated] ROUTE, buildApiPayload, closeTask, createWebHandler, handleWritePayload, routeOf
- * risk: Medium: the prefix must register exactly once per process; response shape is the panel contract.
+ * risk: Medium-high: every response is behind Connection admission; the unauthenticated fallback must stay fail-closed.
  * --- end module contract ---
  */
 
@@ -47,6 +47,37 @@ export function createWebHandler(options) {
   return (req, res) => {
     void (async () => {
       try {
+        // Every route below exposes project memory, citations, model-backed
+        // search or settings writes, so all of it sits behind the Host
+        // Connection trust fence. Fail closed: when the Connection service is
+        // absent we cannot verify the caller, and serving the panel anyway
+        // would be an unauthenticated data exposure.
+        let connection
+        try {
+          const service = typeof ctx?.get === 'function' ? ctx.get('connection') : undefined
+          connection = service ?? (ctx === null || ctx === undefined ? undefined : Reflect.get(ctx, 'connection'))
+        } catch {
+          connection = undefined
+        }
+        if (connection === null || connection === undefined || typeof connection.requestRejection !== 'function') {
+          res.statusCode = 503
+          res.setHeader?.('content-type', 'text/plain; charset=utf-8')
+          res.setHeader?.('cache-control', 'no-store')
+          res.end('flow-tower: connection admission unavailable')
+          return
+        }
+        let rejection
+        try {
+          rejection = connection.requestRejection(req)
+        } catch {
+          rejection = 503
+        }
+        if (rejection !== undefined && rejection !== null) {
+          res.statusCode = rejection
+          res.setHeader?.('cache-control', 'no-store')
+          res.end()
+          return
+        }
         const url = new URL(req?.url ?? req?.originalUrl ?? '/', 'http://flow-tower.local')
         const route = routeOf(url.pathname)
         if (route === null) {

@@ -10,7 +10,7 @@
 | --- | --- |
 | `FlowTower-压缩驱动的项目级上下文记忆系统.docx` | **最新 Word 正文（19 页，6 图 7 表，14 条参考文献；含 §7.3 发布地址与 §7.4 DSH 安装方式）** |
 | `FlowTower-压缩驱动的项目级上下文记忆系统-v2.docx` | 旧版（无 §7.3/§7.4 发布信息，可忽略/删除） |
-| `preview/paper-v6.pdf` | 最新 PDF 预览（对应最新 Word） |
+| `preview/paper-v7.pdf` | 最新 PDF 预览（对应最新 Word） |
 | `figures/fig1_architecture.svg` … `fig5_cost.svg` | 5 张 2D 图，**SVG 矢量源**（docx 内嵌同源 300 dpi PNG） |
 | `figures/fig6_budget_surface_3d.svg/.png` | 3D 图（matplotlib mplot3d，SVG + PNG） |
 | `data/stats.json` | 论文数字的来源快照（词条/关系/引文/编译事件/注入事件/用量） |
@@ -54,7 +54,7 @@
 - 3D 图使用 matplotlib `mplot3d` 的曲面渲染（`plot_surface`），同时导出 SVG 与 PNG；
 - 论文中的数字均来自 `data/stats.json` 与以下真实证据：`compaction-engine-debug.log`、
   `.flow-tower/compaction-runs.jsonl`、`/flow-tower/api/status`、`eval/search-recall.mjs` 与
-  `eval/context-cost.mjs`；代码与测试数字（84/84、68 模块、0 循环、检索 0.94）由 `npm test`
+  `eval/context-cost.mjs`；代码与测试数字（85/85、68 模块、0 循环、检索 0.94）由 `npm test`
   与 `npm run eval:search` 在本轮重新跑过。
 
 ## 发布地址与安装
@@ -62,9 +62,9 @@
 | 项 | 地址 |
 | --- | --- |
 | GitHub 仓库 | <https://github.com/Anseya/flow-tower-context> |
-| npm 包 | <https://www.npmjs.com/package/flow-tower-context>（`0.66.3`） |
-| GitHub Release | <https://github.com/Anseya/flow-tower-context/releases/tag/v0.66.3> |
-| Release tarball | <https://github.com/Anseya/flow-tower-context/releases/download/v0.66.3/flow-tower-context-0.66.3.tgz> |
+| npm 包 | <https://www.npmjs.com/package/flow-tower-context>（`0.66.4`） |
+| GitHub Release | <https://github.com/Anseya/flow-tower-context/releases/tag/v0.66.4> |
+| Release tarball | <https://github.com/Anseya/flow-tower-context/releases/download/v0.66.4/flow-tower-context-0.66.4.tgz> |
 | 插件市场索引（DSH Discover 直接添加） | <https://cdn.jsdelivr.net/npm/flow-tower-context/market/index.json> |
 
 DSH 安装方式：
@@ -76,10 +76,10 @@ DSH 安装方式：
 # 新建会话选择预设 Flow Tower (compaction memory) 启用压缩接管
 
 # 方式 B：安装 npm 包
-plugin_manager install_bundle target=flow-tower-context@0.66.3
+plugin_manager install_bundle target=flow-tower-context@0.66.4
 
 # 方式 C：离线 tarball
-plugin_manager install_bundle target=<下载目录>\flow-tower-context-0.66.3.tgz
+plugin_manager install_bundle target=<下载目录>\flow-tower-context-0.66.4.tgz
 ```
 
 ## 说明

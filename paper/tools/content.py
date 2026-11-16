@@ -407,7 +407,7 @@ BODY = [
           "以下命令均在本地离线运行，不依赖外部服务；在线语义重排（smart search）与 embedding 为可选项、默认关闭，"
           "因此复现本文全部数字不需要模型调用。"),
     ("code", "cd plugin/flow-tower\n"
-             "npm test                              # 84/84 单测 + 模块契约/依赖图检查\n"
+             "npm test                              # 85/85 单测 + 模块契约/依赖图检查\n"
              "npm run eval:search                   # 检索召回（12 词条 / 50 查询）\n"
              "npm run eval:cost                     # 上下文成本报告\n"
              "node eval/txt-corpus-eval.mjs --file=<语料.txt>   # 长文本语料压测\n\n"
